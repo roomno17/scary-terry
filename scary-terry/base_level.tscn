@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://hx428tqb1pmg"]
 
+[ext_resource type="PackedScene" uid="uid://cd50ml3y3my2t" path="res://scary_terry.tscn" id="1_5vx1e"]
+[ext_resource type="Script" uid="uid://c48ao20ce0svc" path="res://camera_3d.gd" id="1_bo3yr"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4sal3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -17,20 +20,37 @@ glow_enabled = true
 transparency = 1
 albedo_color = Color(0.5647059, 1, 1, 0.29803923)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_eesb3"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5vx1e"]
+
 [node name="BaseLevel" type="Node3D" unique_id=1462554241]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1932218815]
+transform = Transform3D(1, 0, 0, 0, -0.8660254, 0.50000006, 0, -0.50000006, -0.8660254, 0, 5.532921, 14.856644)
+light_energy = 0.202
+light_indirect_energy = 16.0
+shadow_enabled = true
+
+[node name="SCARY TERRY RIGHT" parent="." unique_id=1591188626 instance=ExtResource("1_5vx1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 5.5)
+
+[node name="SCARY TERRY LEFT" parent="." unique_id=1076968940 instance=ExtResource("1_5vx1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, 5.5)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=547399205]
 environment = SubResource("Environment_5vx1e")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=322084185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5281718, 6.006915)
+script = ExtResource("1_bo3yr")
 
 [node name="Car" type="Node3D" parent="." unique_id=1773835512]
 
 [node name="Outers" type="Node3D" parent="Car" unique_id=1556189597]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Car/Outers" unique_id=1262575562]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, -0.4)
+transform = Transform3D(1, 0, 0, 0, 0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0.11026156, -0.4)
 size = Vector3(7.5, 3.3, 0.5)
 material = SubResource("StandardMaterial3D_eesb3")
 
@@ -50,53 +70,175 @@ size = Vector3(0.5, 10, 10)
 transform = Transform3D(-4.3711378e-08, -0.9999999, 8.4456046e-16, 0.99957925, -4.3692992e-08, 0.029003292, -0.029003233, 1.267769e-09, 0.9995792, 0.117007256, -4.654106, 2.2107306)
 size = Vector3(0.5, 10, 10)
 
-[node name="Seat1" type="Node3D" parent="Car" unique_id=1981642089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.3, -12.241)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Car/Seat1" unique_id=244490138]
-transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.2419219, 0, 0.2419219, 0.9702957, 0, 0, 15)
-size = Vector3(1.5, 3, 0.5)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Seat1" unique_id=1698576295]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.30596)
-size = Vector3(0.5, 0.5, 0.2)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Seat1/CSGBox3D2" unique_id=1399345658]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
-size = Vector3(0.15, 1, 0.15)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Seat1" unique_id=533749048]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
-size = Vector3(1.5, 0.85, 2)
-
-[node name="Seat2" type="Node3D" parent="Car" unique_id=1719268281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.734765, -1.3, -12.241)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Car/Seat2" unique_id=996613211]
-transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.2419219, 0, 0.2419219, 0.9702957, 0, 0, 15)
-size = Vector3(1.5, 3, 0.5)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Seat2" unique_id=844924641]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.30596)
-size = Vector3(0.5, 0.5, 0.2)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Seat2/CSGBox3D2" unique_id=2123657155]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
-size = Vector3(0.15, 1, 0.15)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Seat2" unique_id=620547464]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
-size = Vector3(1.5, 0.85, 2)
-
 [node name="Interior" type="Node3D" parent="Car" unique_id=1304123148]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Car/Interior" unique_id=1095591765]
+[node name="CSGBox3D7" type="CSGBox3D" parent="Car/Interior" unique_id=831821257]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, -2.3082383, -3.6475148, 1.1606345)
+size = Vector3(2.3, 2, 2.5)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Car/Interior" unique_id=2050962589]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 2.349758, -3.6475148, 1.1606345)
+size = Vector3(2.3, 2, 2.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Interior" unique_id=572661037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2025592, -0.46699142)
+size = Vector3(7, 1.2045898, 0.45031738)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Interior" unique_id=1427480304]
+transform = Transform3D(1, 0, 0, 0, 0.99985045, -0.01729533, 0, 0.01729533, 0.99985045, 0.0019893646, -3.6369624, -3.6724362)
+size = Vector3(7, 4.180786, 0.58447266)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Car/Interior" unique_id=1967624659]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.0019893646, -1.6786295, -2.143501)
+size = Vector3(7, 3.0512695, 0.58447266)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Car/Interior" unique_id=777919865]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.746604, -3.5879278, -3.682204)
+size = Vector3(7, 4.2786865, 0.58447266)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Car/Interior" unique_id=972952877]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.8373914, -3.596778, -3.682204)
+size = Vector3(7, 4.2609863, 0.38397217)
+
+[node name="Wheel" type="Node3D" parent="Car" unique_id=933937578]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.947454, 0.1900562, -0.55384254)
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Car/Wheel" unique_id=1332750841]
+transform = Transform3D(-4.371139e-09, -0.42, -1.110223e-16, 0.09659258, -1.7733223e-08, 0.025881905, -0.025881905, 4.7516022e-09, 0.09659258, -2.2, -0.49706504, 0.18459043)
+mesh = SubResource("CylinderMesh_eesb3")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Car/Wheel" unique_id=173356240]
+transform = Transform3D(0.1, 0, 0, 0, 0.40568882, 0.025881905, 0, -0.10870399, 0.09659258, -2.2, -0.50483656, 0.195)
+mesh = SubResource("CylinderMesh_eesb3")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Car/Wheel" unique_id=1916911802]
+transform = Transform3D(0.3, 0, 0, 0, 0.12940954, -0.28977776, 0, 0.4829629, 0.07764573, -2.2007408, -0.6147962, -0.25572395)
+mesh = SubResource("CylinderMesh_5vx1e")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Car/Wheel" unique_id=1223027067]
+transform = Transform3D(1, 0, 0, 0, 0.25881907, -0.9659258, 0, 0.9659258, 0.25881907, -2.2, -0.497, 0.18510556)
+inner_radius = 0.37
+outer_radius = 0.45
+sides = 40
+ring_sides = 40
+
+[node name="Backseat" type="Node3D" parent="Car" unique_id=1711232511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11323595, 0.6296983)
+
+[node name="Seat5" type="Node3D" parent="Car/Backseat" unique_id=893088148]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0.047245264, -2.459521, -10.58586)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car/Backseat/Seat5" unique_id=1084293238]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.24192189, 0, 0.24192189, 0.9702957, -0.09448241, 0, 15.323994)
+size = Vector3(2.9213867, 3, 0.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Car/Backseat/Seat5" unique_id=1771636378]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.24192189, 0, 0.24192189, 0.9702957, 0, 0, 15.323994)
+size = Vector3(1.5, 3, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Backseat/Seat5" unique_id=560495782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.66936)
+size = Vector3(0.5, 0.5, 0.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Backseat/Seat5/CSGBox3D2" unique_id=1251109075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
+size = Vector3(0.15, 1, 0.15)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Backseat/Seat5" unique_id=705862314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
+size = Vector3(1.5, 0.85, 2)
+
+[node name="Seat4" type="Node3D" parent="Car/Backseat" unique_id=34448836]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 2.335374, -2.459521, -10.58586)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car/Backseat/Seat4" unique_id=920844279]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.24192189, 0, 0.24192189, 0.9702957, 0, 0, 15.323994)
+size = Vector3(1.5, 3, 0.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Car/Backseat/Seat4" unique_id=2050502277]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.24192189, 0, 0.24192189, 0.9702957, 0, 0, 15.323994)
+size = Vector3(1.5, 3, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Backseat/Seat4" unique_id=425220142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.664677)
+size = Vector3(0.5, 0.5, 0.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Backseat/Seat4/CSGBox3D2" unique_id=115103791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
+size = Vector3(0.15, 1, 0.15)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Backseat/Seat4" unique_id=934597126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
+size = Vector3(1.5, 0.85, 2)
+
+[node name="Seat3" type="Node3D" parent="Car/Backseat" unique_id=1540926269]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -2.3, -2.459521, -10.58586)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car/Backseat/Seat3" unique_id=265694009]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.24192189, 0, 0.24192189, 0.9702957, 0, 0, 15.325)
+size = Vector3(1.5, 3, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Backseat/Seat3" unique_id=1084224067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.575361)
+size = Vector3(0.5, 0.5, 0.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Backseat/Seat3/CSGBox3D2" unique_id=1815630332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
+size = Vector3(0.15, 1, 0.15)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Backseat/Seat3" unique_id=282965240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
+size = Vector3(1.5, 0.85, 2)
+
+[node name="Front" type="Node3D" parent="Car" unique_id=238125877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.45431042)
+
+[node name="Seat2" type="Node3D" parent="Car/Front" unique_id=1719268281]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 2.3, -1.3, -13.8)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car/Front/Seat2" unique_id=996613211]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.2419219, 0, 0.2419219, 0.9702957, 0, 0, 15)
+size = Vector3(1.5, 3, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Front/Seat2" unique_id=844924641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.30596)
+size = Vector3(0.5, 0.5, 0.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Front/Seat2/CSGBox3D2" unique_id=2123657155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
+size = Vector3(0.15, 1, 0.15)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Front/Seat2" unique_id=620547464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
+size = Vector3(1.5, 0.85, 2)
+
+[node name="Seat1" type="Node3D" parent="Car/Front" unique_id=1981642089]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -2.3, -1.3, -13.886618)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car/Front/Seat1" unique_id=244490138]
+transform = Transform3D(1, 0, 0, 0, 0.9702957, -0.2419219, 0, 0.2419219, 0.9702957, 0, 0, 15)
+size = Vector3(1.5, 3, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car/Front/Seat1" unique_id=1698576295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9084656, 15.30596)
+size = Vector3(0.5, 0.5, 0.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Front/Seat1/CSGBox3D2" unique_id=1399345658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6303712, -0.0034704208)
+size = Vector3(0.15, 1, 0.15)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car/Front/Seat1" unique_id=533749048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007284522, -1.1749587, 13.70269)
+size = Vector3(1.5, 0.85, 2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car/Front" unique_id=1095591765]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, -2.5619874, 1.1606345)
 size = Vector3(2.3, 2, 2.5)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2048522992]
-transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 1.4578338, 3.1726694)
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 1.9069598, 4.0248632)
 light_color = Color(1, 1, 0.70980394, 1)
-light_energy = 5.635
-light_indirect_energy = 5.924
-light_size = 0.31
+light_energy = 8.365
+light_indirect_energy = 51.72
+light_size = 1.0
+spot_angle = 84.22622
