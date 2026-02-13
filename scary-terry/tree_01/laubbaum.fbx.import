@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1wsd4p6sf4o2"
-path="res://.godot/imported/laubbaum.glb-1ff7ddeaa41fe0e5e3867a483f18aeed.scn"
+uid="uid://ch2m5msyvxt8n"
+path="res://.godot/imported/laubbaum.fbx-d3b7dc88a1363aa5519382d9599889f7.scn"
 
 [deps]
 
-source_file="res://tree_01/laubbaum.glb"
-dest_files=["res://.godot/imported/laubbaum.glb-1ff7ddeaa41fe0e5e3867a483f18aeed.scn"]
+source_file="res://tree_01/laubbaum.fbx"
+dest_files=["res://.godot/imported/laubbaum.fbx-d3b7dc88a1363aa5519382d9599889f7.scn"]
 
 [params]
 
@@ -30,13 +30,21 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+_subresources={
+"nodes": {
+"PATH:Lamp": {
+"import/skip_import": true
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1wsd4p6sf4o2"
-path="res://.godot/imported/laubbaum.glb-1ff7ddeaa41fe0e5e3867a483f18aeed.scn"
+uid="uid://df6frivqxy0dp"
+path="res://.godot/imported/Tree3.glb-1d1c461eb665b57fadbddf2261e5ed22.scn"
 
 [deps]
 
-source_file="res://tree_01/laubbaum.glb"
-dest_files=["res://.godot/imported/laubbaum.glb-1ff7ddeaa41fe0e5e3867a483f18aeed.scn"]
+source_file="res://Tree3.glb"
+dest_files=["res://.godot/imported/Tree3.glb-1d1c461eb665b57fadbddf2261e5ed22.scn"]
 
 [params]
 

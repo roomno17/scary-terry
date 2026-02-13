@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxh6sy2ctq6rm"
-path="res://.godot/imported/snow_gum_mod.png-006c33f111c754e22cae972655a9724d.ctex"
+uid="uid://cdjhtxb2bcv45"
+path.s3tc="res://.godot/imported/Tree3_Tree3.png-b70c5b449a2917a60a87a0e3fe34e5d8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "63f98119994da7b15fe824940787b7c5"
 }
 
 [deps]
 
-source_file="res://tree/snow_gum_mod.png"
-dest_files=["res://.godot/imported/snow_gum_mod.png-006c33f111c754e22cae972655a9724d.ctex"]
+source_file="res://Tree3_Tree3.png"
+dest_files=["res://.godot/imported/Tree3_Tree3.png-b70c5b449a2917a60a87a0e3fe34e5d8.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

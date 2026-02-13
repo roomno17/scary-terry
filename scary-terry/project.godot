@@ -15,6 +15,10 @@ run/main_scene="res://base_level.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[global_group]
+
+tree=""
+
 [input]
 
 left={
