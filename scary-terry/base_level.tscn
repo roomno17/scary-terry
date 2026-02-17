@@ -4384,19 +4384,6 @@ visible = false
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=547399205]
 environment = SubResource("Environment_5vx1e")
 
-[node name="Camera" type="Camera3D" parent="." unique_id=322084185]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5127244, 6.968)
-fov = 55.1
-script = ExtResource("1_bo3yr")
-
-[node name="Timer" type="Timer" parent="Camera" unique_id=1251626032]
-wait_time = 0.851
-autostart = true
-
-[node name="bubble" type="Timer" parent="Camera" unique_id=301876858]
-wait_time = 0.16
-autostart = true
-
 [node name="Car" type="Area3D" parent="." unique_id=1789431675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2, 0)
 
@@ -4644,14 +4631,27 @@ size = Vector3(2.3, 2, 2.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4733887, -0.78015137, 6.2840576)
 shape = SubResource("BoxShape3D_2elnx")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2048522992]
-transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 7.5, 3.765)
+[node name="SpotLight3D" type="SpotLight3D" parent="Car" unique_id=2048522992]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 1.3000002, 3.765)
 light_color = Color(1, 1, 0.70980394, 1)
 light_energy = 2.01
 light_indirect_energy = 1.675
 light_size = 1.0
 light_specular = 2.214
 spot_angle = 84.22622
+
+[node name="Camera" type="Camera3D" parent="Car" unique_id=322084185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127246, 6.968)
+fov = 55.1
+script = ExtResource("1_bo3yr")
+
+[node name="Timer" type="Timer" parent="Car/Camera" unique_id=1251626032]
+wait_time = 0.851
+autostart = true
+
+[node name="bubble" type="Timer" parent="Car/Camera" unique_id=301876858]
+wait_time = 0.16
+autostart = true
 
 [node name="ground2" type="CSGBox3D" parent="." unique_id=1642339035]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.196, 1.2, -34.732)
@@ -6814,5 +6814,5 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -88.17718, -6.6481686, -426.2
 transform = Transform3D(6.2, 0, 0, 0, 6.2, 0, 0, 0, 6.2, 81.16443, -6.6481686, -398.47037)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]
-[connection signal="timeout" from="Camera/bubble" to="Camera" method="_on_bubble_timeout"]
+[connection signal="timeout" from="Car/Camera/Timer" to="Car/Camera" method="_on_timer_timeout"]
+[connection signal="timeout" from="Car/Camera/bubble" to="Car/Camera" method="_on_bubble_timeout"]
