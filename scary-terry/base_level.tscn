@@ -4384,10 +4384,18 @@ visible = false
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=547399205]
 environment = SubResource("Environment_5vx1e")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=322084185]
+[node name="Camera" type="Camera3D" parent="." unique_id=322084185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5127244, 6.968)
 fov = 55.1
 script = ExtResource("1_bo3yr")
+
+[node name="Timer" type="Timer" parent="Camera" unique_id=1251626032]
+wait_time = 0.851
+autostart = true
+
+[node name="bubble" type="Timer" parent="Camera" unique_id=301876858]
+wait_time = 0.16
+autostart = true
 
 [node name="Car" type="Area3D" parent="." unique_id=1789431675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2, 0)
@@ -6748,61 +6756,63 @@ autoplay = &"Armature|Sitting_000"
 [node name="trees" type="Node3D" parent="." unique_id=394569514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
 
-[node name="laubbaum12" parent="trees" unique_id=1849014904 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum12" parent="trees" unique_id=978885659 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -71.37222, -6.6481686, -227.1568)
 
-[node name="laubbaum13" parent="trees" unique_id=234609950 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum13" parent="trees" unique_id=1062164169 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 54.37034, -6.6481686, -353.2837)
 
-[node name="laubbaum11" parent="trees" unique_id=31356966 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum11" parent="trees" unique_id=1989546425 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(5.4, 0, 0, 0, 5.4, 0, 0, 0, 5.4, 47.547073, -6.6481686, -261.23547)
 
-[node name="laubbaum10" parent="trees" unique_id=1460692049 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum10" parent="trees" unique_id=1929089657 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -112.34083, -6.6481686, -260.30023)
 
-[node name="laubbaum9" parent="trees" unique_id=1657146104 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum9" parent="trees" unique_id=2121308472 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73.06125, -6.6481686, -319.40845)
 
-[node name="laubbaum7" parent="trees" unique_id=861065295 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum7" parent="trees" unique_id=1433937202 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(5.8, 0, 0, 0, 5.8, 0, 0, 0, 5.8, -70.82274, -6.6481686, -151.89526)
 
-[node name="laubbaum6" parent="trees" unique_id=884365915 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum6" parent="trees" unique_id=390086685 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(7.2, 0, 0, 0, 7.2, 0, 0, 0, 7.2, -59.6727, -6.6481686, -73.52789)
 
-[node name="laubbaum8" parent="trees" unique_id=610136744 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum8" parent="trees" unique_id=1139087679 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 58.29402, -6.6481686, -182.91916)
 
-[node name="laubbaum5" parent="trees" unique_id=1171344984 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum5" parent="trees" unique_id=340360268 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 113.23773, -6.6481686, -210.01453)
 
-[node name="laubbaum4" parent="trees" unique_id=1557973691 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum4" parent="trees" unique_id=166883402 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 153.15022, -6.6481686, -262.59674)
 
-[node name="laubbaum3" parent="trees" unique_id=614268014 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum3" parent="trees" unique_id=1453043807 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -112.12244, -6.6481686, -152.39917)
 
-[node name="laubbaum17" parent="trees" unique_id=570254314 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum17" parent="trees" unique_id=1056937758 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(4.7, 0, 0, 0, 4.7, 0, 0, 0, 4.7, 49.898544, -6.6481686, -465.4149)
 
-[node name="laubbaum16" parent="trees" unique_id=239705118 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum16" parent="trees" unique_id=803603459 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(4.9, 0, 0, 0, 4.9, 0, 0, 0, 4.9, -112.1761, -6.6481686, -334.74222)
 
-[node name="laubbaum14" parent="trees" unique_id=2061045873 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum14" parent="trees" unique_id=1998462020 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(4.2, 0, 0, 0, 4.2, 0, 0, 0, 4.2, -46.95894, -6.6481686, -273.7211)
 
-[node name="laubbaum15" parent="trees" unique_id=2101873494 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum15" parent="trees" unique_id=280761015 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65.640594, -6.6481686, -481.637)
 
-[node name="laubbaum2" parent="trees" unique_id=1786744624 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum2" parent="trees" unique_id=1102114440 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 103.04155, -6.6481686, -343.97913)
 
-[node name="laubbaum18" parent="trees" unique_id=2122309872 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum18" parent="trees" unique_id=241710540 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -65.640594, -6.6481686, -382.49756)
 
-[node name="laubbaum19" parent="trees" unique_id=1816192254 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum19" parent="trees" unique_id=1106892869 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -88.17718, -6.6481686, -426.24857)
 
-[node name="laubbaum" parent="trees" unique_id=1762341910 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum" parent="trees" unique_id=94932008 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(6.2, 0, 0, 0, 6.2, 0, 0, 0, 6.2, 81.16443, -6.6481686, -398.47037)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]
+[connection signal="timeout" from="Camera/bubble" to="Camera" method="_on_bubble_timeout"]

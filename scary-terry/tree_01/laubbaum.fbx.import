@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:Camera": {
+"import/skip_import": true
+},
 "PATH:Lamp": {
 "import/skip_import": true
 }
