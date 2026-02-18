@@ -30,8 +30,8 @@ func camera_shake():
 	print("boi")
 	var x = randf_range(-.17,.17)
 	var tween = get_tree().create_tween()
-	tween.tween_property(camera,"position",Vector3(x,6.6,6.968),.1)
-	tween.tween_property(camera,"position",Vector3(x,6.4,6.968),.1)
+	tween.tween_property(camera,"position",Vector3(x,6.67,6.968),.1)
+	tween.tween_property(camera,"position",Vector3(-x,6.33,6.968),.1)
 	tween.tween_property(camera,"position",Vector3(0,6.513,6.968),.1)
 
 

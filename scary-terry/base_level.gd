@@ -1,7 +1,8 @@
 extends Node3D
 @onready var scary_terry_right: Node3D = $"SCARY TERRY RIGHT"
 @onready var scary_terry_left: Node3D = $"SCARY TERRY LEFT"
-
+@onready var camera: Camera3D = $Camera
+@onready var animation_player: AnimationPlayer = $Camera/AnimationPlayer
 
 
 func _on_timer_timeout() -> void:

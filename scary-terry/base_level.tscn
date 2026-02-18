@@ -24,6 +24,66 @@ sky = SubResource("Sky_bo3yr")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Animation" id="Animation_bkkah"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 6.5127244, 6.968)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xjg0i"]
+resource_name = "swerve left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 6.5127244, 6.968), Vector3(-20, 6.513, 6.968)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.17453292)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykwpl"]
+_data = {
+&"RESET": SubResource("Animation_bkkah"),
+&"swerve left": SubResource("Animation_xjg0i")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eesb3"]
 transparency = 1
 albedo_color = Color(0.5647059, 1, 1, 0.29803923)
@@ -4384,6 +4444,22 @@ visible = false
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=547399205]
 environment = SubResource("Environment_5vx1e")
 
+[node name="Camera" type="Camera3D" parent="." unique_id=322084185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5127244, 6.968)
+fov = 55.1
+script = ExtResource("1_bo3yr")
+
+[node name="Timer" type="Timer" parent="Camera" unique_id=1251626032]
+wait_time = 0.851
+autostart = true
+
+[node name="bubble" type="Timer" parent="Camera" unique_id=301876858]
+wait_time = 0.16
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera" unique_id=1351074954]
+libraries/ = SubResource("AnimationLibrary_ykwpl")
+
 [node name="Car" type="Area3D" parent="." unique_id=1789431675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2, 0)
 
@@ -4639,19 +4715,6 @@ light_indirect_energy = 1.675
 light_size = 1.0
 light_specular = 2.214
 spot_angle = 84.22622
-
-[node name="Camera" type="Camera3D" parent="Car" unique_id=322084185]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3127246, 6.968)
-fov = 55.1
-script = ExtResource("1_bo3yr")
-
-[node name="Timer" type="Timer" parent="Car/Camera" unique_id=1251626032]
-wait_time = 0.851
-autostart = true
-
-[node name="bubble" type="Timer" parent="Car/Camera" unique_id=301876858]
-wait_time = 0.16
-autostart = true
 
 [node name="ground2" type="CSGBox3D" parent="." unique_id=1642339035]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.196, 1.2, -34.732)
@@ -6814,5 +6877,5 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -88.17718, -6.6481686, -426.2
 transform = Transform3D(6.2, 0, 0, 0, 6.2, 0, 0, 0, 6.2, 81.16443, -6.6481686, -398.47037)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Car/Camera/Timer" to="Car/Camera" method="_on_timer_timeout"]
-[connection signal="timeout" from="Car/Camera/bubble" to="Car/Camera" method="_on_bubble_timeout"]
+[connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]
+[connection signal="timeout" from="Camera/bubble" to="Camera" method="_on_bubble_timeout"]
