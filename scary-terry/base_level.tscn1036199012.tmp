@@ -25,6 +25,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="Animation" id="Animation_bkkah"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -60,30 +61,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../SCARY TERRY LEFT:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-5.5, 6, 5.5), Vector3(-5.5, 6, 5.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../SCARY TERRY RIGHT:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(5.5, 6, 5.5), Vector3(5.5, 6, 5.5)]
 }
 
 [sub_resource type="Animation" id="Animation_xjg0i"]
@@ -124,30 +101,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../SCARY TERRY LEFT:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-5.5, 6, 5.5), Vector3(-25.5, 6, 5.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../SCARY TERRY RIGHT:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(5.5, 6, 5.5), Vector3(-14.5, 6, 5.5)]
-}
 
 [sub_resource type="Animation" id="Animation_ykwpl"]
 resource_name = "swerve right"
@@ -186,30 +139,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, -0.17453292)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../SCARY TERRY RIGHT:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(5.5, 6, 5.5), Vector3(5.5, 6, 5.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../SCARY TERRY LEFT:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-5.5, 6, 5.5), Vector3(-5.5, 6, 5.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykwpl"]
@@ -4567,7 +4496,7 @@ wait_time = 0.16
 autostart = true
 
 [node name="Timer" type="Timer" parent="." unique_id=828128002]
-wait_time = 2.5
+wait_time = 4.0
 autostart = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1932218815]
@@ -4878,7 +4807,6 @@ material = SubResource("StandardMaterial3D_u2wky")
 
 [node name="rabbit" type="Node3D" parent="." unique_id=1909578690]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.54597473, 1.3242288, -328.07733)
-visible = false
 script = ExtResource("4_2elnx")
 
 [node name="Armature" type="Node3D" parent="rabbit" unique_id=1506595003]
@@ -5294,7 +5222,6 @@ autoplay = &"Armature|Sitting_000"
 
 [node name="rabbitleft" type="Node3D" parent="." unique_id=766019935]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -19.880089, 1.3242288, -327.94452)
-visible = false
 script = ExtResource("4_2elnx")
 
 [node name="Armature" type="Node3D" parent="rabbitleft" unique_id=1518965373]
@@ -5710,7 +5637,6 @@ autoplay = &"Armature|Sitting_000"
 
 [node name="rabbitright" type="Node3D" parent="." unique_id=1772541789]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 19.696207, 1.3242288, -327.10056)
-visible = false
 script = ExtResource("4_2elnx")
 
 [node name="Armature" type="Node3D" parent="rabbitright" unique_id=843165400]

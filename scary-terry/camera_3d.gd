@@ -7,9 +7,9 @@ extends Camera3D
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("left"):
-		rotation.y+=.75*delta
+		rotation.y+=3*delta
 	if Input.is_action_pressed("right"):
-		rotation.y-=.75*delta
+		rotation.y-=3*delta
 	if Input.is_action_just_pressed("flash"):
 		print("hi")
 		print(rotation.y)

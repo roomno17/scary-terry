@@ -3,8 +3,17 @@ extends Node3D
 @onready var scary_terry_left: Node3D = $"SCARY TERRY LEFT"
 @onready var camera: Camera3D = $Camera
 @onready var animation_player: AnimationPlayer = $Camera/AnimationPlayer
+var rabbit_scene = preload("res://rabbit-FBX/rabbit.fbx")
 var swerving = false
+@onready var rabbit: Node3D = $rabbit
+@onready var rabbitleft: Node3D = $rabbitleft
+@onready var rabbitright: Node3D = $rabbitright
+var orig_x
+var orig_y 
 
+func _ready() -> void:
+	orig_x= camera.position.x
+	orig_y = camera.position.y
 func _on_timer_timeout() -> void:
 	if scary_terry_left.visible==false:
 		if randi_range(1,10)<2:
@@ -12,6 +21,49 @@ func _on_timer_timeout() -> void:
 	if scary_terry_right.visible==false:
 		if randi_range(1,10)>8:
 			scary_terry_right.visible=true
+	var rand = randi_range(1,10)
+	print(rand)
+	if rand>3 and rand<6:
+		print(str(rand)+"hello")
+		spawn_obstacles()
+
+func spawn_obstacles():
+	print("RABBITS MADE")
+	var vorp = randi_range(1,9)
+	if vorp <4:
+		var rabbit_inst = rabbit_scene.instantiate()
+		var rabbit_inst2 = rabbit_scene.instantiate()
+		add_child(rabbit_inst)
+		add_child(rabbit_inst2)
+		rabbit_inst.scale = Vector3(.4,.4,.4)
+		rabbit_inst2.scale = Vector3(.4,.4,.4)
+		rabbit_inst.add_to_group("rabbit")
+		rabbit_inst2.add_to_group("rabbit")
+		rabbit_inst.position = rabbitright.position
+		rabbit_inst2.position = rabbit.position
+	elif vorp>3 and vorp<7:
+		var rabbit_inst = rabbit_scene.instantiate()
+		var rabbit_inst2 = rabbit_scene.instantiate()
+		add_child(rabbit_inst)
+		add_child(rabbit_inst2)
+		rabbit_inst.scale = Vector3(.4,.4,.4)
+		rabbit_inst2.scale = Vector3(.4,.4,.4)
+		rabbit_inst.add_to_group("rabbit")
+		rabbit_inst2.add_to_group("rabbit")
+		rabbit_inst.position = rabbitleft.position
+		rabbit_inst2.position = rabbit.position
+	else:
+		var rabbit_inst = rabbit_scene.instantiate()
+		var rabbit_inst2 = rabbit_scene.instantiate()
+		rabbit_inst.add_to_group("rabbit")
+		rabbit_inst2.add_to_group("rabbit")
+		add_child(rabbit_inst)
+		add_child(rabbit_inst2)
+		rabbit_inst.scale = Vector3(.4,.4,.4)
+		rabbit_inst2.scale = Vector3(.4,.4,.4)
+		rabbit_inst.position = rabbitleft.position
+		rabbit_inst2.position = rabbitright.position
+	
 
 func _process(delta: float) -> void:
 	var treelist = get_tree().get_nodes_in_group("tree")
@@ -19,6 +71,9 @@ func _process(delta: float) -> void:
 		tree.position.z+=110*delta
 		if tree.position.z >20:
 			tree.position.z = -500
+	var rabbitlist = get_tree().get_nodes_in_group("rabbit")
+	for tree in rabbitlist:
+		tree.position.z+=110*delta
 	if not swerving:
 		if Input.is_action_just_pressed("swerveL"):
 			swerving=true
@@ -43,8 +98,6 @@ func _on_random_timeout() -> void:
 func camera_shake():
 	print("boi")
 	if not swerving:
-		var orig_x= camera.position.x
-		var orig_y = camera.position.y
 		var x = randf_range(-.17,.17)
 		var tween = get_tree().create_tween()
 		tween.tween_property(camera,"position",Vector3(orig_x+x,orig_y+.15,6.968),.05)
@@ -53,8 +106,6 @@ func camera_shake():
 
 func _on_bubble_timeout() -> void:
 	if not swerving:
-		var orig_x= camera.position.x
-		var orig_y = camera.position.y
 		var tween = get_tree().create_tween()
 		tween.tween_property(camera,"position",Vector3(orig_x-.01,orig_y-.01,6.968),.02)
 		tween.tween_property(camera,"position",Vector3(orig_x+.01,orig_y+.01,6.968),.02)
