@@ -10,10 +10,3 @@ func _process(delta: float) -> void:
 		rotation.y+=3*delta
 	if Input.is_action_pressed("right"):
 		rotation.y-=3*delta
-	if Input.is_action_just_pressed("flash"):
-		print("hi")
-		print(rotation.y)
-		if rotation.y>.62:
-			scary_terry_left.visible=false
-		elif rotation.y<-.62:
-			scary_terry_right.visible=false

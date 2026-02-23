@@ -1,12 +1,3 @@
 [gd_scene format=3 uid="uid://cd50ml3y3my2t"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_burpa"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_burpa"]
-albedo_color = Color(1, 0, 1, 1)
-
 [node name="SCARY TERRY" type="Node3D" unique_id=1591188626]
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=410567080]
-mesh = SubResource("CapsuleMesh_burpa")
-material = SubResource("StandardMaterial3D_burpa")

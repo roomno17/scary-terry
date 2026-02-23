@@ -10,6 +10,13 @@ var swerving = false
 @onready var rabbitright: Node3D = $rabbitright
 var orig_x
 var orig_y 
+@onready var color_rect: ColorRect = $CanvasLayer/ColorRect
+@onready var sprite: Sprite2D = $"CanvasLayer/1000F1091752293BB9knbMeCpmW7k8u7h7jKSh226az0vmh"
+@onready var enemy_animation_player: AnimationPlayer = $"SCARY TERRY LEFT/Poses/AnimationPlayer"
+@onready var enemy2_animation_player: AnimationPlayer = $"SCARY TERRY RIGHT/Run/AnimationPlayer"
+var left_time = 0
+var right_time = 0
+@onready var animated_sprite_2d: AnimatedSprite2D = $CanvasLayer/AnimatedSprite2D
 
 func _ready() -> void:
 	orig_x= camera.position.x
@@ -64,8 +71,35 @@ func spawn_obstacles():
 		rabbit_inst.position = rabbitleft.position
 		rabbit_inst2.position = rabbitright.position
 	
-
+func jumpscare():
+	pass
+	#play the video
+func flash():
+	color_rect.modulate.a = 1
+	print("reset")
 func _process(delta: float) -> void:
+	color_rect.modulate.a -=.067
+	animated_sprite_2d.modulate.a=0.09
+	print(color_rect.modulate.a)
+	if Input.is_action_just_pressed("flash"):
+		print("hi")
+		print(rotation.y)
+		if camera.rotation.y>.62:
+			scary_terry_left.visible=false
+			flash()
+		elif camera.rotation.y<-.62:
+			camera.scary_terry_right.visible=false
+			flash()
+	if scary_terry_left.visible == true:
+		left_time+=1*delta
+	if scary_terry_right.visible == true:
+		right_time+=1*delta
+	if right_time>3 or left_time >3:
+		jumpscare()
+	enemy_animation_player.speed_scale = .2
+	enemy_animation_player.play("Poses")
+	enemy2_animation_player.speed_scale = 4
+	enemy2_animation_player.play("Run")
 	var treelist = get_tree().get_nodes_in_group("tree")
 	for tree in treelist:
 		tree.position.z+=110*delta
