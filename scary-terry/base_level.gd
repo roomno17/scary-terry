@@ -17,6 +17,7 @@ var orig_y
 var left_time = 0
 var right_time = 0
 @onready var animated_sprite_2d: AnimatedSprite2D = $CanvasLayer/AnimatedSprite2D
+@onready var animation_player_2: AnimationPlayer = $Camera/AnimationPlayer2
 
 func _ready() -> void:
 	orig_x= camera.position.x
@@ -111,16 +112,20 @@ func _process(delta: float) -> void:
 	if not swerving:
 		if Input.is_action_just_pressed("swerveL"):
 			swerving=true
+			animation_player_2.play("spin wheel")
 			animation_player.play("swerve left")
 			await get_tree().create_timer(2).timeout
 			animation_player.play_backwards("swerve left")
+			animation_player_2.play_backwards("spin wheel")
 			await get_tree().create_timer(1.1).timeout
 			swerving=false
 		if Input.is_action_just_pressed("swerveR"):
 			swerving=true
+			animation_player_2.play_backwards("spin wheel")
 			animation_player.play("swerve right")
 			await get_tree().create_timer(2).timeout
 			animation_player.play_backwards("swerve right")
+			animation_player_2.play("spin wheel")
 			await get_tree().create_timer(1.1).timeout
 			swerving=false
 

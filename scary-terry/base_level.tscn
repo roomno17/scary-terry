@@ -1455,6 +1455,57 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector3(5.5, 6, 5.5), Vector3(5.5, 6, 5.5)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Car/CSGMesh3D2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.26179934, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Car/CSGMesh3D3:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.2617994, -1.1493875e-15, 1.5707964)]
+}
+
+[sub_resource type="Animation" id="Animation_n4s56"]
+resource_name = "spin wheel"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Car/CSGMesh3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.26179934, 0, 0), Vector3(-0.2617994, 0, 1.5707964)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Car/CSGMesh3D3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.2617994, -1.1493875e-15, 1.5707964), Vector3(-0.2617994, 0, 3.1415927)]
+}
 
 [sub_resource type="Animation" id="Animation_xjg0i"]
 resource_name = "swerve left"
@@ -1465,10 +1516,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.15, 0.29, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 6.5127244, 6.968), Vector3(-20, 6.513, 6.968)]
+"values": [Vector3(0, 6.5127244, 6.968), Vector3(0.23789, 6.2300715, 2.9637158), Vector3(-2.159067, 6.2766714, 2.8863811), Vector3(-22.1, 6.27, 2.88)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1477,7 +1528,7 @@ tracks/1/path = NodePath("../Car:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 6.2, 0), Vector3(-20, 6.2, 0)]
@@ -1489,7 +1540,7 @@ tracks/2/path = NodePath("../Car:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
@@ -1501,7 +1552,7 @@ tracks/3/path = NodePath("../SCARY TERRY LEFT:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(-5.5, 6, 5.5), Vector3(-25.5, 6, 5.5)]
@@ -1513,7 +1564,7 @@ tracks/4/path = NodePath("../SCARY TERRY RIGHT:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(5.5, 6, 5.5), Vector3(-14.5, 6, 5.5)]
@@ -1524,69 +1575,102 @@ resource_name = "swerve right"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("../Car:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 6.5127244, 6.968), Vector3(20, 6.513, 6.968)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Car:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 6.2, 0), Vector3(20, 6.2, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Car:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Car:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, -0.17453292)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../SCARY TERRY RIGHT:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SCARY TERRY RIGHT:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(5.5, 6, 5.5), Vector3(25.5, 6, 5.5)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../SCARY TERRY LEFT:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SCARY TERRY LEFT:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(-5.5, 6, 5.5), Vector3(14.5, 6, 5.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.29, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 6.5127244, 6.968), Vector3(0.23789, 6.2300715, 2.9637158), Vector3(-2.159067, 6.2766714, 2.8863811), Vector3(17.9, 6.27, 2.88)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykwpl"]
 _data = {
 &"RESET": SubResource("Animation_bkkah"),
+&"spin wheel": SubResource("Animation_n4s56"),
 &"swerve left": SubResource("Animation_xjg0i"),
 &"swerve right": SubResource("Animation_ykwpl")
+}
+
+[sub_resource type="Animation" id="Animation_c118e"]
+resource_name = "spin wheel"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Car/CSGMesh3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.26666668, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.26179934, 0, 0), Vector3(-0.2617994, 0, 1.5707964)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Car/CSGMesh3D3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.2617994, -1.1493875e-15, 1.5707964), Vector3(-0.2617994, 0, 3.1415927)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_umuus"]
+_data = {
+&"spin wheel": SubResource("Animation_c118e")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eesb3"]
@@ -7341,6 +7425,9 @@ script = ExtResource("1_bo3yr")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera" unique_id=1351074954]
 libraries/ = SubResource("AnimationLibrary_ykwpl")
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Camera" unique_id=2000611356]
+libraries/ = SubResource("AnimationLibrary_umuus")
+
 [node name="Car" type="Area3D" parent="." unique_id=1789431675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2, 0)
 
@@ -7452,20 +7539,20 @@ size = Vector3(7, 4.2609863, 0.38397217)
 [node name="Wheel" type="Node3D" parent="Car" unique_id=933937578]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.947454, 0.1900562, -0.083195806)
 
-[node name="CSGMesh3D3" type="CSGMesh3D" parent="Car/Wheel" unique_id=1332750841]
-transform = Transform3D(-4.371139e-09, -0.42, -1.110223e-16, 0.09659258, -1.7733223e-08, 0.025881905, -0.025881905, 4.7516022e-09, 0.09659258, -2.2, -0.49706504, 0.18459043)
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Car" unique_id=1332750841]
+transform = Transform3D(-8.742278e-09, -0.8399999, -2.220446e-16, 0.19318517, -3.5466442e-08, 0.05176381, -0.05176381, 9.503204e-09, 0.19318517, -2.4525461, -0.8040738, 0.29712647)
 mesh = SubResource("CylinderMesh_eesb3")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="Car/Wheel" unique_id=173356240]
-transform = Transform3D(0.1, 0, 0, 0, 0.40568882, 0.025881905, 0, -0.10870399, 0.09659258, -2.2, -0.50483656, 0.195)
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Car" unique_id=173356240]
+transform = Transform3D(0.2, 0, 0, 0, 0.8113776, 0.0517638, 0, -0.21740793, 0.19318517, -2.4525461, -0.8196168, 0.30680418)
 mesh = SubResource("CylinderMesh_eesb3")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="Car/Wheel" unique_id=1916911802]
-transform = Transform3D(0.3, 0, 0, 0, 0.12940954, -0.28977776, 0, 0.4829629, 0.07764573, -2.2007408, -0.6147962, -0.25572395)
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Car" unique_id=1916911802]
+transform = Transform3D(0.6, 0, 0, 0, 0.25881907, -0.5795555, 0, 0.9659258, 0.15529145, -2.4540277, -1.039536, -0.5946437)
 mesh = SubResource("CylinderMesh_5vx1e")
 
-[node name="CSGTorus3D" type="CSGTorus3D" parent="Car/Wheel" unique_id=1223027067]
-transform = Transform3D(1, 0, 0, 0, 0.25881907, -0.9659258, 0, 0.9659258, 0.25881907, -2.2, -0.497, 0.18510556)
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Car" unique_id=1223027067]
+transform = Transform3D(1.9976429, -0.025124133, 0.09376421, 0.09707188, 0.5170276, -1.9295748, 1.1920929e-07, 1.9318519, 0.5176376, -2.4525461, -0.80394363, 0.28701532)
 inner_radius = 0.37
 outer_radius = 0.45
 sides = 40
