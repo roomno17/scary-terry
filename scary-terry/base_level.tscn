@@ -9049,7 +9049,7 @@ stream = ExtResource("18_c118e")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=620083183]
 stream = ExtResource("19_umuus")
-volume_db = 10.5
+volume_db = 15.0
 autoplay = true
 
 [connection signal="timeout" from="random" to="." method="_on_random_timeout"]
