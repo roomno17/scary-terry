@@ -18,10 +18,48 @@ var left_time = 0
 var right_time = 0
 @onready var animated_sprite_2d: AnimatedSprite2D = $CanvasLayer/AnimatedSprite2D
 @onready var animation_player_2: AnimationPlayer = $Camera/AnimationPlayer2
+@onready var label: Label = $CanvasLayer/Label
+@onready var color_rect_2: ColorRect = $CanvasLayer/ColorRect2
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
 	orig_x= camera.position.x
 	orig_y = camera.position.y
+	label.text = "You wake up with the car traveling in a straight line
+	down a secluded road"
+	await get_tree().create_timer(5).timeout
+	label.text = "You are traveling through the wooded parts of the east coast 
+	on a family roadtrip to Niagara Falls"
+	await get_tree().create_timer(5).timeout
+	label.text = "Then you notice the car is completely empty except for yourself"
+	await get_tree().create_timer(5).timeout
+	label.text = "*This must be a dream* You think, 
+	until you hear something from the radio"
+	await get_tree().create_timer(5).timeout
+	audio_stream_player.play()
+	label.text="This is a county wide emergency warning."
+	await get_tree().create_timer(2.5).timeout
+	label.text = "If you are traveling in the Vandermark 
+	state forest between Arkport and Bellsville, please have caution. "
+	await get_tree().create_timer(6).timeout
+	label.text="Wildlife has been acting strange lately,
+	 sometimes completely blocking roads."
+	await get_tree().create_timer(5).timeout
+	label.text = "It is recommended to keep your speed at
+	 a slower pace to avoid hitting them. "
+	await get_tree().create_timer(5).timeout
+	label.text = "In addition, strange sightings of an indescribable
+	 creature at night, possibly a bear,"
+	await get_tree().create_timer(5.5).timeout
+	label.text = "along with mysterious car crashes and missing persons 
+	cases due to heavy fog have been common in the area."
+	await get_tree().create_timer(5.8).timeout
+	label.text="Visitors should stay extra vigilant 
+	on their trip through the state forest, especially on secluded roads."
+	await get_tree().create_timer(6.3).timeout
+	label.visible=false
+	color_rect_2.visible= false
+	
 func _on_timer_timeout() -> void:
 	if scary_terry_left.visible==false:
 		if randi_range(1,10)<2:

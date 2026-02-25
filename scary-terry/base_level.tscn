@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://declb16t2kf3d" path="res://scarybeast/Poses/Poses_0.png" id="10_i6nmd"]
 [ext_resource type="Texture2D" uid="uid://bk4joj1xlnjc5" path="res://scarybeast/Poses/Poses_6.png" id="11_upirv"]
 [ext_resource type="Texture2D" uid="uid://dou6ofqoieryc" path="res://scarybeast/Poses/Poses_3.png" id="12_7lcpk"]
+[ext_resource type="AudioStream" uid="uid://dmqi03qd5uh33" path="res://68551b1a-81a3-461f-8c6a-fb380f3aa503.wav" id="18_c118e"]
+[ext_resource type="AudioStream" uid="uid://bi3062661hsgn" path="res://Driving Car Sound Effect (Inside).wav" id="19_umuus"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c118e"]
 atlas = ExtResource("2_n4s56")
@@ -60,6 +62,9 @@ animations = [{
 "name": &"default",
 "speed": 30.0
 }]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c118e"]
+font_size = 32
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjdyf"]
 resource_name = "Mtrl_02"
@@ -6024,6 +6029,28 @@ scale = Vector2(1.8296875, 1.8393352)
 sprite_frames = SubResource("SpriteFrames_kkae7")
 autoplay = "default"
 
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=951245278]
+offset_top = 491.0
+offset_right = 1150.0
+offset_bottom = 648.0
+size_flags_vertical = 8
+color = Color(0, 0, 0, 0.5568628)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1179582581]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.5
+offset_top = -126.0
+offset_right = 576.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_c118e")
+horizontal_alignment = 1
+
 [node name="random" type="Timer" parent="." unique_id=1251626032]
 wait_time = 0.851
 autostart = true
@@ -7544,7 +7571,7 @@ transform = Transform3D(-8.742278e-09, -0.8399999, -2.220446e-16, 0.19318517, -3
 mesh = SubResource("CylinderMesh_eesb3")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="Car" unique_id=173356240]
-transform = Transform3D(0.2, 0, 0, 0, 0.8113776, 0.0517638, 0, -0.21740793, 0.19318517, -2.4525461, -0.8196168, 0.30680418)
+transform = Transform3D(0.2, 0, 0, 0, 0.8113775, 0.0517638, 0, -0.21740791, 0.19318517, -2.4525461, -0.8196168, 0.30680418)
 mesh = SubResource("CylinderMesh_eesb3")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="Car" unique_id=1916911802]
@@ -9016,6 +9043,14 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -88.17718, -6.6481686, -426.2
 
 [node name="laubbaum" parent="trees" unique_id=94932008 groups=["tree"] instance=ExtResource("8_bkkah")]
 transform = Transform3D(6.2, 0, 0, 0, 6.2, 0, 0, 0, 6.2, 81.16443, -6.6481686, -398.47037)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1166742923]
+stream = ExtResource("18_c118e")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=620083183]
+stream = ExtResource("19_umuus")
+volume_db = 10.5
+autoplay = true
 
 [connection signal="timeout" from="random" to="." method="_on_random_timeout"]
 [connection signal="timeout" from="random" to="Camera" method="_on_timer_timeout"]
