@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://dou6ofqoieryc" path="res://scarybeast/Poses/Poses_3.png" id="12_7lcpk"]
 [ext_resource type="AudioStream" uid="uid://dmqi03qd5uh33" path="res://68551b1a-81a3-461f-8c6a-fb380f3aa503.wav" id="18_c118e"]
 [ext_resource type="AudioStream" uid="uid://bi3062661hsgn" path="res://Driving Car Sound Effect (Inside).wav" id="19_umuus"]
+[ext_resource type="AudioStream" uid="uid://r7e2cevws4v4" path="res://swervesou.mp3" id="20_87xd1"]
+[ext_resource type="AudioStream" uid="uid://d338rmgi2i65r" path="res://Glass Scratch Sound Effect  SFX Free for Non-Profit Projects.mp3" id="21_lxby7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c118e"]
 atlas = ExtResource("2_n4s56")
@@ -6043,9 +6045,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -576.5
-offset_top = -126.0
+offset_top = -111.0
 offset_right = 576.5
-offset_bottom = -50.0
+offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 0
 label_settings = SubResource("LabelSettings_c118e")
@@ -6071,6 +6073,7 @@ shadow_enabled = true
 
 [node name="SCARY TERRY RIGHT" parent="." unique_id=1591188626 instance=ExtResource("1_5vx1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 6, 5.5)
+visible = false
 
 [node name="Run" type="Node3D" parent="SCARY TERRY RIGHT" unique_id=178922916]
 transform = Transform3D(-0.0013961594, 0, -4.9999995, 0, 5, 0, 4.9999995, 0, -0.0013961594, 3.511078, -6.7662287, 0.050783157)
@@ -6758,6 +6761,7 @@ libraries/ = SubResource("AnimationLibrary_tqa0q")
 
 [node name="SCARY TERRY LEFT" parent="." unique_id=1076968940 instance=ExtResource("1_5vx1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 6, 5.5)
+visible = false
 
 [node name="Poses" type="Node3D" parent="SCARY TERRY LEFT" unique_id=1570192791]
 transform = Transform3D(0.4743641, 0, 4.977447, 0, 5, 0, -4.977447, 0, 0.4743641, -1.7848659, -6.462857, -0.18344355)
@@ -7571,7 +7575,7 @@ transform = Transform3D(-8.742278e-09, -0.8399999, -2.220446e-16, 0.19318517, -3
 mesh = SubResource("CylinderMesh_eesb3")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="Car" unique_id=173356240]
-transform = Transform3D(0.2, 0, 0, 0, 0.8113775, 0.0517638, 0, -0.21740791, 0.19318517, -2.4525461, -0.8196168, 0.30680418)
+transform = Transform3D(0.2, 0, 0, 0, 0.81137747, 0.0517638, 0, -0.2174079, 0.19318517, -2.4525461, -0.8196168, 0.30680418)
 mesh = SubResource("CylinderMesh_eesb3")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="Car" unique_id=1916911802]
@@ -9051,6 +9055,19 @@ stream = ExtResource("18_c118e")
 stream = ExtResource("19_umuus")
 volume_db = 15.0
 autoplay = true
+
+[node name="swerve" type="AudioStreamPlayer" parent="." unique_id=1081183454]
+stream = ExtResource("20_87xd1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1149065542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.682234, 6.78526, 5.047262)
+stream = ExtResource("21_lxby7")
+volume_db = -5.0
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=1317029043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.045369, 6.78526, 5.047262)
+stream = ExtResource("21_lxby7")
+volume_db = -5.0
 
 [connection signal="timeout" from="random" to="." method="_on_random_timeout"]
 [connection signal="timeout" from="random" to="Camera" method="_on_timer_timeout"]

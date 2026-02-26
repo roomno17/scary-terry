@@ -21,7 +21,10 @@ var right_time = 0
 @onready var label: Label = $CanvasLayer/Label
 @onready var color_rect_2: ColorRect = $CanvasLayer/ColorRect2
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
-
+@onready var swerve: AudioStreamPlayer = $swerve
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var audio_stream_player_3d_2: AudioStreamPlayer3D = $AudioStreamPlayer3D2
+var announcement_playing = true
 func _ready() -> void:
 	orig_x= camera.position.x
 	orig_y = camera.position.y
@@ -57,21 +60,23 @@ func _ready() -> void:
 	label.text="Visitors should stay extra vigilant 
 	on their trip through the state forest, especially on secluded roads."
 	await get_tree().create_timer(6.3).timeout
+	announcement_playing=false
 	label.visible=false
 	color_rect_2.visible= false
 	
 func _on_timer_timeout() -> void:
-	if scary_terry_left.visible==false:
-		if randi_range(1,10)<2:
-			scary_terry_left.visible=true
-	if scary_terry_right.visible==false:
-		if randi_range(1,10)>8:
-			scary_terry_right.visible=true
-	var rand = randi_range(1,10)
-	print(rand)
-	if rand>3 and rand<6:
-		print(str(rand)+"hello")
-		spawn_obstacles()
+	if announcement_playing == false:
+		if scary_terry_left.visible==false:
+			if randi_range(1,10)<2:
+				scary_terry_left.visible=true
+		if scary_terry_right.visible==false:
+			if randi_range(1,10)>8:
+				scary_terry_right.visible=true
+		var rand = randi_range(1,10)
+		print(rand)
+		if rand>3 and rand<6:
+			print(str(rand)+"hello")
+			spawn_obstacles()
 
 func spawn_obstacles():
 	print("RABBITS MADE")
@@ -117,6 +122,17 @@ func flash():
 	color_rect.modulate.a = 1
 	print("reset")
 func _process(delta: float) -> void:
+	if scary_terry_left.visible == true:
+		if not audio_stream_player_3d.playing:
+			audio_stream_player_3d.play()
+		print(audio_stream_player_3d.is_playing())
+	else:
+		audio_stream_player_3d.stop()
+	if scary_terry_right.visible == true:
+		if not audio_stream_player_3d_2.playing:
+			audio_stream_player_3d_2.play()
+	else:
+		audio_stream_player_3d_2.stop()
 	color_rect.modulate.a -=.067
 	animated_sprite_2d.modulate.a=0.09
 	print(color_rect.modulate.a)
@@ -150,6 +166,7 @@ func _process(delta: float) -> void:
 	if not swerving:
 		if Input.is_action_just_pressed("swerveL"):
 			swerving=true
+			swerve.play()
 			animation_player_2.play("spin wheel")
 			animation_player.play("swerve left")
 			await get_tree().create_timer(2).timeout
@@ -159,6 +176,7 @@ func _process(delta: float) -> void:
 			swerving=false
 		if Input.is_action_just_pressed("swerveR"):
 			swerving=true
+			swerve.play()
 			animation_player_2.play_backwards("spin wheel")
 			animation_player.play("swerve right")
 			await get_tree().create_timer(2).timeout
