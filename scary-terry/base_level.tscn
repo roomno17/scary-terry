@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c48ao20ce0svc" path="res://camera_3d.gd" id="1_bo3yr"]
 [ext_resource type="Script" uid="uid://6nlik6g4v0xo" path="res://base_level.gd" id="1_eesb3"]
 [ext_resource type="Texture2D" uid="uid://c5iji71w66ynj" path="res://Television_static-ezgif.com-gif-to-sprite-converter.png" id="2_n4s56"]
+[ext_resource type="Texture2D" uid="uid://qsdpal8pvdfg" path="res://jumpscare-kid-jumpscare-ezgif.com-gif-to-sprite-converter.png" id="3_h36or"]
 [ext_resource type="Texture2D" uid="uid://c80tv0jnjfhjd" path="res://scarybeast/Poses/Run_5.png" id="3_lbjvu"]
 [ext_resource type="Script" uid="uid://dhe4k007bry0" path="res://rabbit.gd" id="4_2elnx"]
 [ext_resource type="Texture2D" uid="uid://c7tykm2yujp64" path="res://scarybeast/Poses/Run_0.png" id="4_n4s56"]
@@ -67,6 +68,168 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_c118e"]
 font_size = 32
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkae7"]
+atlas = ExtResource("3_h36or")
+region = Rect2(0, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cofcm"]
+atlas = ExtResource("3_h36or")
+region = Rect2(220, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5elwx"]
+atlas = ExtResource("3_h36or")
+region = Rect2(440, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ujub"]
+atlas = ExtResource("3_h36or")
+region = Rect2(660, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fo8u"]
+atlas = ExtResource("3_h36or")
+region = Rect2(880, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cbnv"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1100, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwsf7"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1320, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsnda"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1540, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwn73"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1760, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dienp"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1980, 0, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsvj7"]
+atlas = ExtResource("3_h36or")
+region = Rect2(0, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y778q"]
+atlas = ExtResource("3_h36or")
+region = Rect2(220, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvnol"]
+atlas = ExtResource("3_h36or")
+region = Rect2(440, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11dj5"]
+atlas = ExtResource("3_h36or")
+region = Rect2(660, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujcwo"]
+atlas = ExtResource("3_h36or")
+region = Rect2(880, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqqtn"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1100, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fmsj"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1320, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6dd4"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1540, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fa0w0"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1760, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27bl8"]
+atlas = ExtResource("3_h36or")
+region = Rect2(1980, 220, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_556y1"]
+atlas = ExtResource("3_h36or")
+region = Rect2(0, 440, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prttm"]
+atlas = ExtResource("3_h36or")
+region = Rect2(220, 440, 220, 220)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nlhjx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkae7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cofcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5elwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ujub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fo8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cbnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwsf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsnda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwn73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dienp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsvj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y778q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvnol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11dj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujcwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqqtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fmsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6dd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fa0w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27bl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_556y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prttm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjdyf"]
 resource_name = "Mtrl_02"
@@ -1689,7 +1852,7 @@ albedo_color = Color(0.5647059, 1, 1, 0.29803923)
 [sub_resource type="CylinderMesh" id="CylinderMesh_5vx1e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elnx"]
-size = Vector3(14.606934, 11.834717, 26.375244)
+size = Vector3(9.026306, 11.834717, 13.38208)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vx1e"]
 albedo_color = Color(0.17785347, 0.17785347, 0.17785347, 1)
@@ -6053,6 +6216,13 @@ grow_vertical = 0
 label_settings = SubResource("LabelSettings_c118e")
 horizontal_alignment = 1
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=374677124]
+visible = false
+position = Vector2(573, 322.50003)
+scale = Vector2(5.3909087, 2.9954548)
+sprite_frames = SubResource("SpriteFrames_nlhjx")
+frame_progress = 0.73689735
+
 [node name="random" type="Timer" parent="." unique_id=1251626032]
 wait_time = 0.851
 autostart = true
@@ -6062,7 +6232,7 @@ wait_time = 0.16
 autostart = true
 
 [node name="Timer" type="Timer" parent="." unique_id=828128002]
-wait_time = 2.5
+wait_time = 3.0
 autostart = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1932218815]
@@ -7703,7 +7873,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.984
 size = Vector3(2.3, 2, 2.5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Car" unique_id=663049231]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4733887, -0.78015137, 6.2840576)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12564087, -0.78015137, 5.626831)
 shape = SubResource("BoxShape3D_2elnx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Car" unique_id=2048522992]
@@ -7742,7 +7912,6 @@ material = SubResource("StandardMaterial3D_u2wky")
 
 [node name="rabbit" type="Node3D" parent="." unique_id=1909578690]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.54597473, 1.3242288, -328.07733)
-visible = false
 script = ExtResource("4_2elnx")
 
 [node name="Armature" type="Node3D" parent="rabbit" unique_id=1506595003]
@@ -8158,7 +8327,6 @@ autoplay = &"Armature|Sitting_000"
 
 [node name="rabbitleft" type="Node3D" parent="." unique_id=766019935]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -19.880089, 1.3242288, -327.94452)
-visible = false
 script = ExtResource("4_2elnx")
 
 [node name="Armature" type="Node3D" parent="rabbitleft" unique_id=1518965373]
@@ -8574,7 +8742,6 @@ autoplay = &"Armature|Sitting_000"
 
 [node name="rabbitright" type="Node3D" parent="." unique_id=1772541789]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 19.696207, 1.3242288, -327.10056)
-visible = false
 script = ExtResource("4_2elnx")
 
 [node name="Armature" type="Node3D" parent="rabbitright" unique_id=843165400]
@@ -9074,3 +9241,4 @@ volume_db = -5.0
 [connection signal="timeout" from="bubble" to="." method="_on_bubble_timeout"]
 [connection signal="timeout" from="bubble" to="Camera" method="_on_bubble_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Car" to="." method="_on_car_area_entered"]

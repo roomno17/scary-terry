@@ -25,6 +25,9 @@ var right_time = 0
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 @onready var audio_stream_player_3d_2: AudioStreamPlayer3D = $AudioStreamPlayer3D2
 var announcement_playing = true
+var collision = preload("res://area_3d.tscn")
+@onready var animated_sprite_2d_2: AnimatedSprite2D = $CanvasLayer/AnimatedSprite2D2
+
 func _ready() -> void:
 	orig_x= camera.position.x
 	orig_y = camera.position.y
@@ -84,48 +87,70 @@ func spawn_obstacles():
 	if vorp <4:
 		var rabbit_inst = rabbit_scene.instantiate()
 		var rabbit_inst2 = rabbit_scene.instantiate()
+		var collisionshape = collision.instantiate()
+		var collisionshape2 = collision.instantiate()
 		add_child(rabbit_inst)
 		add_child(rabbit_inst2)
+		add_child(collisionshape)
+		add_child(collisionshape2)
 		rabbit_inst.scale = Vector3(.4,.4,.4)
 		rabbit_inst2.scale = Vector3(.4,.4,.4)
 		rabbit_inst.add_to_group("rabbit")
 		rabbit_inst2.add_to_group("rabbit")
+		collisionshape.add_to_group("rabbit")
+		collisionshape2.add_to_group("rabbit")
 		rabbit_inst.position = rabbitright.position
 		rabbit_inst2.position = rabbit.position
+		collisionshape.position = rabbit_inst.position
+		collisionshape2.position = rabbit_inst2.position
 	elif vorp>3 and vorp<7:
 		var rabbit_inst = rabbit_scene.instantiate()
 		var rabbit_inst2 = rabbit_scene.instantiate()
+		var collisionshape = collision.instantiate()
+		var collisionshape2 = collision.instantiate()
 		add_child(rabbit_inst)
 		add_child(rabbit_inst2)
+		add_child(collisionshape)
+		add_child(collisionshape2)
 		rabbit_inst.scale = Vector3(.4,.4,.4)
 		rabbit_inst2.scale = Vector3(.4,.4,.4)
 		rabbit_inst.add_to_group("rabbit")
 		rabbit_inst2.add_to_group("rabbit")
+		collisionshape.add_to_group("rabbit")
+		collisionshape2.add_to_group("rabbit")
 		rabbit_inst.position = rabbitleft.position
 		rabbit_inst2.position = rabbit.position
+		collisionshape.position = rabbit_inst.position
+		collisionshape2.position = rabbit_inst2.position
 	else:
 		var rabbit_inst = rabbit_scene.instantiate()
 		var rabbit_inst2 = rabbit_scene.instantiate()
+		var collisionshape = collision.instantiate()
+		var collisionshape2 = collision.instantiate()
 		rabbit_inst.add_to_group("rabbit")
 		rabbit_inst2.add_to_group("rabbit")
+		collisionshape.add_to_group("rabbit")
+		collisionshape2.add_to_group("rabbit")
 		add_child(rabbit_inst)
 		add_child(rabbit_inst2)
+		add_child(collisionshape)
+		add_child(collisionshape2)
 		rabbit_inst.scale = Vector3(.4,.4,.4)
 		rabbit_inst2.scale = Vector3(.4,.4,.4)
 		rabbit_inst.position = rabbitleft.position
 		rabbit_inst2.position = rabbitright.position
-	
+		collisionshape.position = rabbit_inst.position
+		collisionshape2.position = rabbit_inst2.position
 func jumpscare():
-	pass
-	#play the video
+	print("JUMPSCARED")
+	animated_sprite_2d_2.visible= true
+	animated_sprite_2d_2.play()
 func flash():
 	color_rect.modulate.a = 1
-	print("reset")
 func _process(delta: float) -> void:
 	if scary_terry_left.visible == true:
 		if not audio_stream_player_3d.playing:
 			audio_stream_player_3d.play()
-		print(audio_stream_player_3d.is_playing())
 	else:
 		audio_stream_player_3d.stop()
 	if scary_terry_right.visible == true:
@@ -135,16 +160,15 @@ func _process(delta: float) -> void:
 		audio_stream_player_3d_2.stop()
 	color_rect.modulate.a -=.067
 	animated_sprite_2d.modulate.a=0.09
-	print(color_rect.modulate.a)
 	if Input.is_action_just_pressed("flash"):
-		print("hi")
-		print(rotation.y)
 		if camera.rotation.y>.62:
 			scary_terry_left.visible=false
 			flash()
+			left_time = 0
 		elif camera.rotation.y<-.62:
 			camera.scary_terry_right.visible=false
 			flash()
+			right_time = 0
 	if scary_terry_left.visible == true:
 		left_time+=1*delta
 	if scary_terry_right.visible == true:
@@ -205,3 +229,7 @@ func _on_bubble_timeout() -> void:
 		tween.tween_property(camera,"position",Vector3(orig_x-.01,orig_y-.01,6.968),.02)
 		tween.tween_property(camera,"position",Vector3(orig_x+.01,orig_y+.01,6.968),.02)
 		tween.tween_property(camera,"position",Vector3(orig_x,orig_y,6.968),.02)
+
+
+func _on_car_area_entered(area: Area3D) -> void:
+	jumpscare()
