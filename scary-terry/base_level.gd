@@ -3,7 +3,7 @@ extends Node3D
 @onready var scary_terry_left: Node3D = $"SCARY TERRY LEFT"
 @onready var camera: Camera3D = $Camera
 @onready var animation_player: AnimationPlayer = $Camera/AnimationPlayer
-var rabbit_scene = preload("res://rabbit-FBX/rabbit.fbx")
+var rabbit_scene = preload("res://rabbit_template.tscn")
 var swerving = false
 @onready var rabbit: Node3D = $rabbit
 @onready var rabbitleft: Node3D = $rabbitleft
@@ -11,7 +11,6 @@ var swerving = false
 var orig_x
 var orig_y 
 @onready var color_rect: ColorRect = $CanvasLayer/ColorRect
-@onready var sprite: Sprite2D = $"CanvasLayer/1000F1091752293BB9knbMeCpmW7k8u7h7jKSh226az0vmh"
 @onready var enemy_animation_player: AnimationPlayer = $"SCARY TERRY LEFT/Poses/AnimationPlayer"
 @onready var enemy2_animation_player: AnimationPlayer = $"SCARY TERRY RIGHT/Run/AnimationPlayer"
 var left_time = 0
@@ -27,6 +26,14 @@ var right_time = 0
 var announcement_playing = true
 var collision = preload("res://area_3d.tscn")
 @onready var animated_sprite_2d_2: AnimatedSprite2D = $CanvasLayer/AnimatedSprite2D2
+@onready var jumpscare_sound: AudioStreamPlayer = $jumpscare
+var jumpscared = false
+@onready var jump_1: Sprite2D = $CanvasLayer/jump1
+@onready var jump_2: Sprite2D = $CanvasLayer/jump2
+@onready var jump_3: Sprite2D = $CanvasLayer/jump3
+@onready var jump_4: Sprite2D = $CanvasLayer/jump4
+@onready var scary: AudioStreamPlayer = $scary
+
 
 func _ready() -> void:
 	orig_x= camera.position.x
@@ -142,9 +149,39 @@ func spawn_obstacles():
 		collisionshape.position = rabbit_inst.position
 		collisionshape2.position = rabbit_inst2.position
 func jumpscare():
-	print("JUMPSCARED")
-	animated_sprite_2d_2.visible= true
-	animated_sprite_2d_2.play()
+	if not jumpscared:
+		jumpscared = true
+		print("JUMPSCARED")
+		jumpscare_sound.play()
+		await get_tree().create_timer(.1).timeout
+		scary.play()
+		jump_1.visible=true
+		await get_tree().create_timer(.1).timeout
+		jump_1.visible=false
+		jump_2.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_2.visible=false
+		jump_3.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_3.visible=false
+		jump_4.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_4.visible=false
+		await get_tree().create_timer(.05).timeout
+		jump_1.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_1.visible=false
+		jump_2.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_2.visible=false
+		jump_3.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_3.visible=false
+		jump_4.visible=true
+		await get_tree().create_timer(.05).timeout
+		jump_4.visible=false
+		animated_sprite_2d_2.visible= true
+		animated_sprite_2d_2.play()
 func flash():
 	color_rect.modulate.a = 1
 func _process(delta: float) -> void:
