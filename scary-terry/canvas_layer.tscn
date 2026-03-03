@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://qtjejkajalc7"]
+
+[ext_resource type="Script" uid="uid://jvdbltfbfare" path="res://canvas_layer.gd" id="1_tg4cr"]
+[ext_resource type="Texture2D" uid="uid://bjbnxk72s320g" path="res://f0ac57cce3d0ec44bbed6035eb7af1d7.jpg" id="2_37rai"]
+[ext_resource type="AudioStream" uid="uid://btiifw4u7rfal" path="res://Rust Fishing Village Music in good quality (trimmed).mp3" id="3_37rai"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qrqu"]
+font_size = 64
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=865025852]
+script = ExtResource("1_tg4cr")
+
+[node name="F0Ac57Cce3d0Ec44Bbed6035Eb7Af1d7" type="Sprite2D" parent="." unique_id=1844149576]
+position = Vector2(563.5, 328)
+scale = Vector2(5.0805087, 2.806867)
+texture = ExtResource("2_37rai")
+
+[node name="Label" type="Label" parent="." unique_id=1393810364]
+offset_left = 510.0
+offset_top = 36.0
+offset_right = 1040.0
+offset_bottom = 215.0
+text = "You Survived!
+(for long enough)"
+label_settings = SubResource("LabelSettings_0qrqu")
+
+[node name="Button" type="Button" parent="." unique_id=354998942]
+offset_left = 720.0
+offset_top = 443.0
+offset_right = 967.0
+offset_bottom = 518.0
+theme_override_font_sizes/font_size = 48
+text = "Play Again"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=843448349]
+stream = ExtResource("3_37rai")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

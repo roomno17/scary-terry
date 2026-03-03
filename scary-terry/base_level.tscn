@@ -483,6 +483,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_uwsf7"]
+font_size = 50
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjdyf"]
 resource_name = "Mtrl_02"
 vertex_color_use_as_albedo = true
@@ -6506,6 +6509,24 @@ position = Vector2(577, 322.5)
 scale = Vector2(1.8374999, 1.4076433)
 texture = ExtResource("7_qwn73")
 
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=94707864]
+visible = false
+offset_left = 459.0
+offset_top = 324.0
+offset_right = 691.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 64
+text = "Retry
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=384939397]
+offset_left = 511.0
+offset_top = 7.0
+offset_right = 647.0
+offset_bottom = 76.0
+text = "12AM"
+label_settings = SubResource("LabelSettings_uwsf7")
+
 [node name="random" type="Timer" parent="." unique_id=1251626032]
 wait_time = 0.851
 autostart = true
@@ -9533,6 +9554,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.045369, 6.78526, 5.047262)
 stream = ExtResource("21_lxby7")
 volume_db = -5.0
 
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="random" to="." method="_on_random_timeout"]
 [connection signal="timeout" from="random" to="Camera" method="_on_timer_timeout"]
 [connection signal="timeout" from="bubble" to="." method="_on_bubble_timeout"]

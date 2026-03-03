@@ -33,8 +33,12 @@ var jumpscared = false
 @onready var jump_3: Sprite2D = $CanvasLayer/jump3
 @onready var jump_4: Sprite2D = $CanvasLayer/jump4
 @onready var scary: AudioStreamPlayer = $scary
-
-
+var fading = false
+@onready var color_rect_3: ColorRect = $CanvasLayer/AnimatedSprite2D2/ColorRect3
+@onready var button: Button = $CanvasLayer/Button
+var time = 0
+@onready var label_2: Label = $CanvasLayer/Label2
+var clock = 0
 func _ready() -> void:
 	orig_x= camera.position.x
 	orig_y = camera.position.y
@@ -148,6 +152,7 @@ func spawn_obstacles():
 		rabbit_inst2.position = rabbitright.position
 		collisionshape.position = rabbit_inst.position
 		collisionshape2.position = rabbit_inst2.position
+		
 func jumpscare():
 	if not jumpscared:
 		jumpscared = true
@@ -182,9 +187,27 @@ func jumpscare():
 		jump_4.visible=false
 		animated_sprite_2d_2.visible= true
 		animated_sprite_2d_2.play()
+		fading = true
+		await get_tree().create_timer(3).timeout
+		button.visible=true
+		
 func flash():
 	color_rect.modulate.a = 1
+
+func win():
+	get_tree().change_scene_to_file("res://canvas_layer.tscn")
+
 func _process(delta: float) -> void:
+	time+=1*delta
+	print(time)
+	if time > 45:
+		time =0
+		clock+=1
+		label_2.text = str(clock)+"AM"
+	if clock ==6:
+		call_deferred("win")
+	if fading:
+		color_rect_3.modulate.a+=.05*delta
 	if scary_terry_left.visible == true:
 		if not audio_stream_player_3d.playing:
 			audio_stream_player_3d.play()
@@ -207,10 +230,12 @@ func _process(delta: float) -> void:
 			flash()
 			right_time = 0
 	if scary_terry_left.visible == true:
-		left_time+=1*delta
+		if not swerving:
+			left_time+=1*delta
 	if scary_terry_right.visible == true:
-		right_time+=1*delta
-	if right_time>3 or left_time >3:
+		if not swerving:
+			right_time+=1*delta
+	if right_time>4 or left_time >4:
 		jumpscare()
 	enemy_animation_player.speed_scale = .2
 	enemy_animation_player.play("Poses")
@@ -259,7 +284,10 @@ func camera_shake():
 		tween.tween_property(camera,"position",Vector3(orig_x+x,orig_y+.15,6.968),.05)
 		tween.tween_property(camera,"position",Vector3(orig_x-x,orig_y-.15,6.968),.05)
 		tween.tween_property(camera,"position",Vector3(orig_x,orig_y,6.968),.05)
-
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(animated_sprite_2d_2,"position",Vector2(575+x,322+.15),.05)
+		tween2.tween_property(animated_sprite_2d_2,"position",Vector2(575-x,322-.15),.05)
+		tween2.tween_property(animated_sprite_2d_2,"position",Vector2(575,322),.05)
 func _on_bubble_timeout() -> void:
 	if not swerving:
 		var tween = get_tree().create_tween()
@@ -270,3 +298,7 @@ func _on_bubble_timeout() -> void:
 
 func _on_car_area_entered(area: Area3D) -> void:
 	jumpscare()
+
+
+func _on_button_pressed() -> void:
+	get_tree().reload_current_scene()
