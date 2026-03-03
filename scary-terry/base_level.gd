@@ -188,7 +188,7 @@ func jumpscare():
 		animated_sprite_2d_2.visible= true
 		animated_sprite_2d_2.play()
 		fading = true
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(4).timeout
 		button.visible=true
 		
 func flash():
