@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://df30ymhyn5ix1"]
+
+[ext_resource type="Script" uid="uid://jvdbltfbfare" path="res://canvas_layer.gd" id="1_oy530"]
+[ext_resource type="Texture2D" uid="uid://bjbnxk72s320g" path="res://f0ac57cce3d0ec44bbed6035eb7af1d7.jpg" id="2_kmv7p"]
+[ext_resource type="AudioStream" uid="uid://btiifw4u7rfal" path="res://Rust Fishing Village Music in good quality (trimmed).mp3" id="3_o3j1m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qrqu"]
+font_size = 64
+
+[node name="difficulty" type="CanvasLayer" unique_id=865025852]
+script = ExtResource("1_oy530")
+
+[node name="F0Ac57Cce3d0Ec44Bbed6035Eb7Af1d7" type="Sprite2D" parent="." unique_id=1844149576]
+position = Vector2(563.5, 328)
+scale = Vector2(5.0805087, 2.806867)
+texture = ExtResource("2_kmv7p")
+
+[node name="Label" type="Label" parent="." unique_id=1393810364]
+offset_left = 122.0
+offset_top = 220.0
+offset_right = 1739.0
+offset_bottom = 399.0
+text = "choose normal, sound is 
+bugged on other difficulties"
+label_settings = SubResource("LabelSettings_0qrqu")
+
+[node name="Button" type="Button" parent="." unique_id=354998942]
+offset_left = 194.0
+offset_top = 443.0
+offset_right = 441.0
+offset_bottom = 518.0
+theme_override_font_sizes/font_size = 48
+text = "Normal"
+
+[node name="Button2" type="Button" parent="." unique_id=1798889024]
+offset_left = 454.0
+offset_top = 443.0
+offset_right = 701.0
+offset_bottom = 518.0
+theme_override_font_sizes/font_size = 48
+text = "Hard"
+
+[node name="Button3" type="Button" parent="." unique_id=1035093834]
+offset_left = 734.0
+offset_top = 443.0
+offset_right = 981.0
+offset_bottom = 518.0
+theme_override_font_sizes/font_size = 48
+text = "Impossible"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=843448349]
+stream = ExtResource("3_o3j1m")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_pressed"]

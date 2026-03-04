@@ -1,54 +1,54 @@
-[gd_scene format=4 uid="uid://hx428tqb1pmg"]
+[gd_scene format=4 uid="uid://cbanl4niw83gc"]
 
-[ext_resource type="PackedScene" uid="uid://cd50ml3y3my2t" path="res://scary_terry.tscn" id="1_5vx1e"]
-[ext_resource type="Script" uid="uid://c48ao20ce0svc" path="res://camera_3d.gd" id="1_bo3yr"]
-[ext_resource type="Script" uid="uid://6nlik6g4v0xo" path="res://base_level.gd" id="1_eesb3"]
-[ext_resource type="Texture2D" uid="uid://c5iji71w66ynj" path="res://Television_static-ezgif.com-gif-to-sprite-converter.png" id="2_n4s56"]
-[ext_resource type="Texture2D" uid="uid://dcq8ct3jcg2u7" path="res://knocking-on-window-horror-knocking-ezgif.com-gif-to-sprite-converter.png" id="3_cofcm"]
-[ext_resource type="Texture2D" uid="uid://c80tv0jnjfhjd" path="res://scarybeast/Poses/Run_5.png" id="3_lbjvu"]
-[ext_resource type="Script" uid="uid://dhe4k007bry0" path="res://rabbit.gd" id="4_2elnx"]
-[ext_resource type="Texture2D" uid="uid://xmhatieuycyg" path="res://Screenshot 2026-03-02 122348.png" id="4_4cbnv"]
-[ext_resource type="Texture2D" uid="uid://c7tykm2yujp64" path="res://scarybeast/Poses/Run_0.png" id="4_n4s56"]
-[ext_resource type="Texture2D" uid="uid://cqntwdf7rxnjy" path="res://rabbit-FBX/texture/Fur-skin.png" id="4_u2wky"]
-[ext_resource type="Texture2D" uid="uid://146y308yw8d3" path="res://rabbit-FBX/texture/rabbit-skinn.png" id="5_2elnx"]
-[ext_resource type="Texture2D" uid="uid://dchhjpehr6nvh" path="res://scarybeast/Poses/Run_6.png" id="5_c118e"]
-[ext_resource type="Texture2D" uid="uid://epnnpeov02on" path="res://4087af0f0b28c2b64d9456c51aa75c4c.jpg" id="5_uwsf7"]
-[ext_resource type="Texture2D" uid="uid://bh3cxv7nmujjt" path="res://rabbit-FBX/texture/rabbit-NORM.png" id="6_bkkah"]
-[ext_resource type="Texture2D" uid="uid://bjbnxk72s320g" path="res://f0ac57cce3d0ec44bbed6035eb7af1d7.jpg" id="6_tsnda"]
-[ext_resource type="Texture2D" uid="uid://blsaw0g0mrf6u" path="res://scarybeast/Poses/Run_3.png" id="6_umuus"]
-[ext_resource type="Texture2D" uid="uid://cjxamj2ejyvnp" path="res://whats-the-funniest-analog-horror-scene-v0-xa33i8f616zc1.webp" id="7_qwn73"]
-[ext_resource type="PackedScene" uid="uid://ch2m5msyvxt8n" path="res://tree_01/laubbaum.fbx" id="8_bkkah"]
-[ext_resource type="FontFile" uid="uid://bs60nckreflo1" path="res://Digital7-rg1mL.ttf" id="8_tsnda"]
-[ext_resource type="Texture2D" uid="uid://ciyqhhiy8mux4" path="res://scarybeast/Poses/Poses_5.png" id="9_83eob"]
-[ext_resource type="Texture2D" uid="uid://declb16t2kf3d" path="res://scarybeast/Poses/Poses_0.png" id="10_i6nmd"]
-[ext_resource type="Texture2D" uid="uid://bk4joj1xlnjc5" path="res://scarybeast/Poses/Poses_6.png" id="11_upirv"]
-[ext_resource type="Texture2D" uid="uid://dou6ofqoieryc" path="res://scarybeast/Poses/Poses_3.png" id="12_7lcpk"]
-[ext_resource type="AudioStream" uid="uid://dmqi03qd5uh33" path="res://68551b1a-81a3-461f-8c6a-fb380f3aa503.wav" id="18_c118e"]
-[ext_resource type="PackedScene" uid="uid://q0o82cefmyep" path="res://rabbit_template.tscn" id="18_cofcm"]
-[ext_resource type="AudioStream" uid="uid://bi3062661hsgn" path="res://Driving Car Sound Effect (Inside).wav" id="19_umuus"]
-[ext_resource type="AudioStream" uid="uid://r7e2cevws4v4" path="res://swervesou.mp3" id="20_87xd1"]
-[ext_resource type="AudioStream" uid="uid://d338rmgi2i65r" path="res://Glass Scratch Sound Effect  SFX Free for Non-Profit Projects.mp3" id="21_lxby7"]
-[ext_resource type="AudioStream" uid="uid://3di0lcgaqhag" path="res://loud-crash-sound-effect_B9h2X6zz.mp3" id="22_kkae7"]
-[ext_resource type="AudioStream" uid="uid://bj7jlyyrv7j35" path="res://Tortured Distorted Scream Sound Effect 865.mp3" id="28_uwsf7"]
+[ext_resource type="Script" uid="uid://6nlik6g4v0xo" path="res://base_level.gd" id="1_4iayl"]
+[ext_resource type="FontFile" uid="uid://bs60nckreflo1" path="res://Digital7-rg1mL.ttf" id="2_rv4ff"]
+[ext_resource type="Texture2D" uid="uid://c5iji71w66ynj" path="res://Television_static-ezgif.com-gif-to-sprite-converter.png" id="3_wknll"]
+[ext_resource type="Texture2D" uid="uid://dcq8ct3jcg2u7" path="res://knocking-on-window-horror-knocking-ezgif.com-gif-to-sprite-converter.png" id="4_yo7od"]
+[ext_resource type="Texture2D" uid="uid://xmhatieuycyg" path="res://Screenshot 2026-03-02 122348.png" id="5_pr283"]
+[ext_resource type="Texture2D" uid="uid://epnnpeov02on" path="res://4087af0f0b28c2b64d9456c51aa75c4c.jpg" id="6_lu2xu"]
+[ext_resource type="Texture2D" uid="uid://bjbnxk72s320g" path="res://f0ac57cce3d0ec44bbed6035eb7af1d7.jpg" id="7_jxt11"]
+[ext_resource type="Texture2D" uid="uid://cjxamj2ejyvnp" path="res://whats-the-funniest-analog-horror-scene-v0-xa33i8f616zc1.webp" id="8_2rkke"]
+[ext_resource type="PackedScene" uid="uid://cd50ml3y3my2t" path="res://scary_terry.tscn" id="9_2xbrw"]
+[ext_resource type="Texture2D" uid="uid://c80tv0jnjfhjd" path="res://scarybeast/Poses/Run_5.png" id="10_vqifk"]
+[ext_resource type="Texture2D" uid="uid://c7tykm2yujp64" path="res://scarybeast/Poses/Run_0.png" id="11_grwq7"]
+[ext_resource type="Texture2D" uid="uid://dchhjpehr6nvh" path="res://scarybeast/Poses/Run_6.png" id="12_02u0o"]
+[ext_resource type="Texture2D" uid="uid://blsaw0g0mrf6u" path="res://scarybeast/Poses/Run_3.png" id="13_gdkgv"]
+[ext_resource type="Texture2D" uid="uid://ciyqhhiy8mux4" path="res://scarybeast/Poses/Poses_5.png" id="14_vouyn"]
+[ext_resource type="Texture2D" uid="uid://declb16t2kf3d" path="res://scarybeast/Poses/Poses_0.png" id="15_l3ug0"]
+[ext_resource type="Texture2D" uid="uid://bk4joj1xlnjc5" path="res://scarybeast/Poses/Poses_6.png" id="16_bs7uw"]
+[ext_resource type="Texture2D" uid="uid://dou6ofqoieryc" path="res://scarybeast/Poses/Poses_3.png" id="17_08pky"]
+[ext_resource type="Script" uid="uid://c48ao20ce0svc" path="res://camera_3d.gd" id="18_vm6p2"]
+[ext_resource type="Script" uid="uid://dhe4k007bry0" path="res://rabbit.gd" id="19_6mfk5"]
+[ext_resource type="Texture2D" uid="uid://cqntwdf7rxnjy" path="res://rabbit-FBX/texture/Fur-skin.png" id="20_yqggj"]
+[ext_resource type="Texture2D" uid="uid://146y308yw8d3" path="res://rabbit-FBX/texture/rabbit-skinn.png" id="21_xouma"]
+[ext_resource type="Texture2D" uid="uid://bh3cxv7nmujjt" path="res://rabbit-FBX/texture/rabbit-NORM.png" id="22_e455o"]
+[ext_resource type="PackedScene" uid="uid://q0o82cefmyep" path="res://rabbit_template.tscn" id="23_uc5f3"]
+[ext_resource type="PackedScene" uid="uid://ch2m5msyvxt8n" path="res://tree_01/laubbaum.fbx" id="24_r8pp2"]
+[ext_resource type="AudioStream" uid="uid://dmqi03qd5uh33" path="res://68551b1a-81a3-461f-8c6a-fb380f3aa503.wav" id="25_5xvan"]
+[ext_resource type="AudioStream" uid="uid://bi3062661hsgn" path="res://Driving Car Sound Effect (Inside).wav" id="26_uehxm"]
+[ext_resource type="AudioStream" uid="uid://r7e2cevws4v4" path="res://swervesou.mp3" id="27_5kqdg"]
+[ext_resource type="AudioStream" uid="uid://3di0lcgaqhag" path="res://loud-crash-sound-effect_B9h2X6zz.mp3" id="28_ind7x"]
+[ext_resource type="AudioStream" uid="uid://bj7jlyyrv7j35" path="res://Tortured Distorted Scream Sound Effect 865.mp3" id="29_svct2"]
+[ext_resource type="AudioStream" uid="uid://d338rmgi2i65r" path="res://Glass Scratch Sound Effect  SFX Free for Non-Profit Projects.mp3" id="30_k6jjt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c118e"]
-atlas = ExtResource("2_n4s56")
+atlas = ExtResource("3_wknll")
 region = Rect2(0, 0, 640, 361)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umuus"]
-atlas = ExtResource("2_n4s56")
+atlas = ExtResource("3_wknll")
 region = Rect2(640, 0, 640, 361)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_87xd1"]
-atlas = ExtResource("2_n4s56")
+atlas = ExtResource("3_wknll")
 region = Rect2(1280, 0, 640, 361)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxby7"]
-atlas = ExtResource("2_n4s56")
+atlas = ExtResource("3_wknll")
 region = Rect2(1920, 0, 640, 361)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h36or"]
-atlas = ExtResource("2_n4s56")
+atlas = ExtResource("3_wknll")
 region = Rect2(2560, 0, 640, 361)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kkae7"]
@@ -78,231 +78,231 @@ animations = [{
 font_size = 32
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5elwx"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 0, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ujub"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 0, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fo8u"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 0, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4cbnv"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 0, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwsf7"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 0, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsnda"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 165, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qwn73"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 165, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dienp"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 165, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsvj7"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 165, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y778q"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 165, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvnol"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 330, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11dj5"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 330, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ujcwo"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 330, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqqtn"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 330, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0fmsj"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 330, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6dd4"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 495, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fa0w0"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 495, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_27bl8"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 495, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_556y1"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 495, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prttm"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 495, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nlhjx"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 660, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_as8k4"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 660, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s42jl"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 660, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6cxow"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 660, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbhra"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 660, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj6ou"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 825, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uab2u"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 825, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jwmom"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 825, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukh14"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 825, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_125fb"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 825, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w707f"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 990, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fofh"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 990, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1kwu"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 990, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ows3p"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 990, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7uwa"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 990, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45mlx"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 1155, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t51ca"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 1155, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka4lq"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 1155, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xs1l2"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 1155, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdt1x"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 1155, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ncx7e"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 1320, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cqou"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 1320, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqk73"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 1320, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2a42b"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 1320, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y61k7"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 1320, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4cxgb"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 1485, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kcot3"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 1485, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g8mpm"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 1485, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dff1c"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 1485, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idapf"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 1485, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bp2lh"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 1650, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ypp44"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 1650, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dlih7"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(330, 1650, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw8us"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(495, 1650, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4busv"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(660, 1650, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_61pi6"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(0, 1815, 165, 165)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghe6n"]
-atlas = ExtResource("3_cofcm")
+atlas = ExtResource("4_yo7od")
 region = Rect2(165, 1815, 165, 165)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nlhjx"]
@@ -485,7 +485,7 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwsf7"]
-font = ExtResource("8_tsnda")
+font = ExtResource("2_rv4ff")
 font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_tsnda"]
@@ -494,13 +494,13 @@ font_size = 30
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjdyf"]
 resource_name = "Mtrl_02"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("3_lbjvu")
+albedo_texture = ExtResource("10_vqifk")
 metallic = 1.0
-metallic_texture = ExtResource("4_n4s56")
-roughness_texture = ExtResource("6_umuus")
+metallic_texture = ExtResource("11_grwq7")
+roughness_texture = ExtResource("13_gdkgv")
 emission_enabled = true
 normal_enabled = true
-normal_texture = ExtResource("5_c118e")
+normal_texture = ExtResource("12_02u0o")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_g6qb0"]
 resource_name = "Creature1"
@@ -1013,13 +1013,13 @@ _data = {
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ah1as"]
 resource_name = "Mtrl_02"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("9_83eob")
+albedo_texture = ExtResource("14_vouyn")
 metallic = 1.0
-metallic_texture = ExtResource("10_i6nmd")
-roughness_texture = ExtResource("12_7lcpk")
+metallic_texture = ExtResource("15_l3ug0")
+roughness_texture = ExtResource("17_08pky")
 emission_enabled = true
 normal_enabled = true
-normal_texture = ExtResource("11_upirv")
+normal_texture = ExtResource("16_bs7uw")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_n3ldc"]
 resource_name = "Creature1"
@@ -2130,7 +2130,7 @@ resource_name = "Fur"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 0.8)
-albedo_texture = ExtResource("4_u2wky")
+albedo_texture = ExtResource("20_yqggj")
 emission_enabled = true
 emission = Color(0.5799941, 0.45598274, 0.41109732, 1)
 emission_energy_multiplier = 0.0
@@ -2273,13 +2273,13 @@ bind/36/pose = Transform3D(1, 7.564845e-07, -1.6642196e-07, -2.444723e-13, 0.214
 resource_name = "Fur.001"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 0.8)
-albedo_texture = ExtResource("5_2elnx")
+albedo_texture = ExtResource("21_xouma")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
 normal_scale = 0.0
-normal_texture = ExtResource("6_bkkah")
+normal_texture = ExtResource("22_e455o")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_tmpo7"]
 resource_name = "Cylinder"
@@ -6442,14 +6442,14 @@ _data = {
 &"Fur|Guard": SubResource("Animation_oryd5")
 }
 
-[node name="BaseLevel" type="Node3D" unique_id=1462554241]
-script = ExtResource("1_eesb3")
+[node name="BaseLevelHard" type="Node3D" unique_id=1462554241]
+script = ExtResource("1_4iayl")
 
 [node name="Label3D" type="Label3D" parent="." unique_id=1564179174]
 transform = Transform3D(1, 0, 0, 0, 0.99859834, 0.052928545, 0, -0.052928545, 0.99859834, 0, 5.530908, -0.13849835)
 pixel_size = 0.01
 text = "12AM"
-font = ExtResource("8_tsnda")
+font = ExtResource("2_rv4ff")
 font_size = 40
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1065548608]
@@ -6504,25 +6504,25 @@ color = Color(0, 0, 0, 0.7529412)
 visible = false
 position = Vector2(568.25, 325.5)
 scale = Vector2(2.1745887, 1.9327486)
-texture = ExtResource("4_4cbnv")
+texture = ExtResource("5_pr283")
 
 [node name="jump2" type="Sprite2D" parent="CanvasLayer" unique_id=1042855930]
 visible = false
 position = Vector2(574.49994, 328.99997)
 scale = Vector2(2.4789028, 1.8929578)
-texture = ExtResource("5_uwsf7")
+texture = ExtResource("6_lu2xu")
 
 [node name="jump3" type="Sprite2D" parent="CanvasLayer" unique_id=63274728]
 visible = false
 position = Vector2(579, 328)
 scale = Vector2(4.9661016, 2.8497856)
-texture = ExtResource("6_tsnda")
+texture = ExtResource("7_jxt11")
 
 [node name="jump4" type="Sprite2D" parent="CanvasLayer" unique_id=463604052]
 visible = false
 position = Vector2(577, 322.5)
 scale = Vector2(1.8374999, 1.4076433)
-texture = ExtResource("7_qwn73")
+texture = ExtResource("8_2rkke")
 
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=94707864]
 visible = false
@@ -6584,7 +6584,7 @@ light_energy = 0.202
 light_indirect_energy = 16.0
 shadow_enabled = true
 
-[node name="SCARY TERRY RIGHT" parent="." unique_id=1591188626 instance=ExtResource("1_5vx1e")]
+[node name="SCARY TERRY RIGHT" parent="." unique_id=1591188626 instance=ExtResource("9_2xbrw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 6, 5.5)
 visible = false
 
@@ -7272,7 +7272,7 @@ transform = Transform3D(9.453839, 0, 0, 0, 9.453839, 0, 0, 0, 9.453839, 1.709186
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SCARY TERRY RIGHT/Run" unique_id=1655708049]
 libraries/ = SubResource("AnimationLibrary_tqa0q")
 
-[node name="SCARY TERRY LEFT" parent="." unique_id=1076968940 instance=ExtResource("1_5vx1e")]
+[node name="SCARY TERRY LEFT" parent="." unique_id=1076968940 instance=ExtResource("9_2xbrw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 6, 5.5)
 visible = false
 
@@ -7964,7 +7964,7 @@ environment = SubResource("Environment_5vx1e")
 [node name="Camera" type="Camera3D" parent="." unique_id=322084185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5127244, 6.968)
 fov = 55.1
-script = ExtResource("1_bo3yr")
+script = ExtResource("18_vm6p2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera" unique_id=1351074954]
 libraries/ = SubResource("AnimationLibrary_ykwpl")
@@ -8261,7 +8261,7 @@ material = SubResource("StandardMaterial3D_u2wky")
 [node name="rabbit" type="Node3D" parent="." unique_id=1909578690]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.54597473, 1.3242288, -378.39758)
 visible = false
-script = ExtResource("4_2elnx")
+script = ExtResource("19_6mfk5")
 
 [node name="Armature" type="Node3D" parent="rabbit" unique_id=1506595003]
 transform = Transform3D(100, 0, 0, 0, 0, 100, 0, -100, 0, 0, 0, 0)
@@ -8674,13 +8674,13 @@ skeleton = NodePath("..")
 libraries/ = SubResource("AnimationLibrary_sp0gt")
 autoplay = &"Armature|Sitting_000"
 
-[node name="rabbit_template" parent="." unique_id=1733128594 instance=ExtResource("18_cofcm")]
+[node name="rabbit_template" parent="." unique_id=1733128594 instance=ExtResource("23_uc5f3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.54597473, 1.3242288, -711.1433)
 
 [node name="rabbitleft" type="Node3D" parent="." unique_id=766019935]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -19.880089, 1.3242288, -373.15387)
 visible = false
-script = ExtResource("4_2elnx")
+script = ExtResource("19_6mfk5")
 
 [node name="Armature" type="Node3D" parent="rabbitleft" unique_id=1518965373]
 transform = Transform3D(100, 0, 0, 0, 0, 100, 0, -100, 0, 0, 0, 0)
@@ -9096,7 +9096,7 @@ autoplay = &"Armature|Sitting_000"
 [node name="rabbitright" type="Node3D" parent="." unique_id=1772541789]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 19.696207, 1.3242288, -380.36145)
 visible = false
-script = ExtResource("4_2elnx")
+script = ExtResource("19_6mfk5")
 
 [node name="Armature" type="Node3D" parent="rabbitright" unique_id=843165400]
 transform = Transform3D(100, 0, 0, 0, 0, 100, 0, -100, 0, 0, 0, 0)
@@ -9512,90 +9512,90 @@ autoplay = &"Armature|Sitting_000"
 [node name="trees" type="Node3D" parent="." unique_id=394569514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
 
-[node name="laubbaum12" parent="trees" unique_id=978885659 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum12" parent="trees" unique_id=978885659 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -71.37222, -6.6481686, -227.1568)
 
-[node name="laubbaum13" parent="trees" unique_id=1062164169 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum13" parent="trees" unique_id=1062164169 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 54.37034, -6.6481686, -353.2837)
 
-[node name="laubbaum11" parent="trees" unique_id=1989546425 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum11" parent="trees" unique_id=1989546425 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(5.4, 0, 0, 0, 5.4, 0, 0, 0, 5.4, 47.547073, -6.6481686, -261.23547)
 
-[node name="laubbaum10" parent="trees" unique_id=1929089657 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum10" parent="trees" unique_id=1929089657 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -112.34083, -6.6481686, -260.30023)
 
-[node name="laubbaum9" parent="trees" unique_id=2121308472 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum9" parent="trees" unique_id=2121308472 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -73.06125, -6.6481686, -319.40845)
 
-[node name="laubbaum7" parent="trees" unique_id=1433937202 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum7" parent="trees" unique_id=1433937202 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(5.8, 0, 0, 0, 5.8, 0, 0, 0, 5.8, -70.82274, -6.6481686, -151.89526)
 
-[node name="laubbaum6" parent="trees" unique_id=390086685 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum6" parent="trees" unique_id=390086685 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(7.2, 0, 0, 0, 7.2, 0, 0, 0, 7.2, -59.6727, -6.6481686, -73.52789)
 
-[node name="laubbaum8" parent="trees" unique_id=1139087679 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum8" parent="trees" unique_id=1139087679 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 58.29402, -6.6481686, -182.91916)
 
-[node name="laubbaum5" parent="trees" unique_id=340360268 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum5" parent="trees" unique_id=340360268 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 113.23773, -6.6481686, -210.01453)
 
-[node name="laubbaum4" parent="trees" unique_id=166883402 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum4" parent="trees" unique_id=166883402 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 153.15022, -6.6481686, -262.59674)
 
-[node name="laubbaum3" parent="trees" unique_id=1453043807 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum3" parent="trees" unique_id=1453043807 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -112.12244, -6.6481686, -152.39917)
 
-[node name="laubbaum17" parent="trees" unique_id=1056937758 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum17" parent="trees" unique_id=1056937758 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(4.7, 0, 0, 0, 4.7, 0, 0, 0, 4.7, 49.898544, -6.6481686, -465.4149)
 
-[node name="laubbaum16" parent="trees" unique_id=803603459 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum16" parent="trees" unique_id=803603459 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(4.9, 0, 0, 0, 4.9, 0, 0, 0, 4.9, -112.1761, -6.6481686, -334.74222)
 
-[node name="laubbaum14" parent="trees" unique_id=1998462020 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum14" parent="trees" unique_id=1998462020 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(4.2, 0, 0, 0, 4.2, 0, 0, 0, 4.2, -46.95894, -6.6481686, -273.7211)
 
-[node name="laubbaum15" parent="trees" unique_id=280761015 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum15" parent="trees" unique_id=280761015 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65.640594, -6.6481686, -481.637)
 
-[node name="laubbaum2" parent="trees" unique_id=1102114440 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum2" parent="trees" unique_id=1102114440 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 103.04155, -6.6481686, -343.97913)
 
-[node name="laubbaum18" parent="trees" unique_id=241710540 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum18" parent="trees" unique_id=241710540 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -65.640594, -6.6481686, -382.49756)
 
-[node name="laubbaum19" parent="trees" unique_id=1106892869 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum19" parent="trees" unique_id=1106892869 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -88.17718, -6.6481686, -426.24857)
 
-[node name="laubbaum" parent="trees" unique_id=94932008 groups=["tree"] instance=ExtResource("8_bkkah")]
+[node name="laubbaum" parent="trees" unique_id=94932008 groups=["tree"] instance=ExtResource("24_r8pp2")]
 transform = Transform3D(6.2, 0, 0, 0, 6.2, 0, 0, 0, 6.2, 81.16443, -6.6481686, -398.47037)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1166742923]
-stream = ExtResource("18_c118e")
+stream = ExtResource("25_5xvan")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=620083183]
-stream = ExtResource("19_umuus")
+stream = ExtResource("26_uehxm")
 volume_db = 15.0
 autoplay = true
 
 [node name="swerve" type="AudioStreamPlayer" parent="." unique_id=1081183454]
-stream = ExtResource("20_87xd1")
+stream = ExtResource("27_5kqdg")
 
 [node name="jumpscare" type="AudioStreamPlayer" parent="." unique_id=840857121]
-stream = ExtResource("22_kkae7")
+stream = ExtResource("28_ind7x")
 volume_db = 24.0
 
 [node name="scary" type="AudioStreamPlayer" parent="." unique_id=347786611]
-stream = ExtResource("28_uwsf7")
+stream = ExtResource("29_svct2")
 volume_db = 11.5
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1149065542]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.682234, 6.78526, 5.047262)
-stream = ExtResource("21_lxby7")
+stream = ExtResource("30_k6jjt")
 volume_db = -5.0
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=1317029043]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.045369, 6.78526, 5.047262)
-stream = ExtResource("21_lxby7")
+stream = ExtResource("30_k6jjt")
 volume_db = -5.0
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
